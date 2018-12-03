@@ -1,0 +1,43 @@
+.home-form {
+	display: flex;
+	flex-flow: column;
+	margin-top: 2rem;
+	text-align: center;
+}
+
+.home-form input[type="date"] {
+	margin-bottom: 1rem;
+	height: 2rem;
+}
+
+.home-personCount {
+	font-size: 2rem;
+	width: 90%;
+	margin: auto;
+	height: 10%;
+	display: flex;
+	justify-content: space-between;
+	list-style: none;
+	padding: 0;
+}
+
+.home-personCount li {
+	transition: all 0.3s ease-in-out;
+}
+
+.home-personCount li:hover {
+	color: #ce6c6c;
+	cursor: pointer;
+}
+
+@media (max-width: 768px) {
+	.home-form input[type="date"] {
+		margin-bottom: 0.5rem;
+		height: 1rem;
+		width: 50%;
+		margin: 0.5rem auto;
+	}
+	.home-personCount {
+		font-size: 1rem;
+	}
+}
