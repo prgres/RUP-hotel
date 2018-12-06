@@ -1,30 +1,28 @@
 import React from "react";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faSearch } from "@fortawesome/free-solid-svg-icons";
 import PersonCounter from "../../Components/PersonCounter/PersonCounter";
+import "./SearchForm.css";
 
 function SearchForm(props) {
 	return (
-		<form className="home-form">
+		<React.Fragment>
 			<h3 className="home-form-heading">
 				1. Wybierz termin który Cię interesuje
 			</h3>
-			<input type="date" placeholder="Data przyjazdu" />
-			<input type="date" placeholder="Data wyjazdu" />
-			<h3 className="home-form-heading">2. Wybierz liczbę osób</h3>
-			<p>
-				(W przypadku większej liczby osób proszę wybrać więcej niz jedną
-				opcję)
-			</p>
-			<PersonCounter
-				options={props.options}
-				handler={props.chooseRoomOptionHandler}
-			/>
-			<button>
-				<FontAwesomeIcon style={{ marginRight: 10 }} icon={faSearch} />
-				Szukaj
-			</button>
-		</form>
+			<form className="home-form">
+				<input type="date" placeholder="Data przyjazdu" />
+				<input type="date" placeholder="Data wyjazdu" />
+				<div>
+					<h3 className="home-form-heading">
+						2. Wybierz liczbę osób
+					</h3>
+					<PersonCounter
+						options={props.options}
+						handler={props.chooseRoomOptionHandler}
+					/>
+				</div>
+			</form>
+			<button className="home-form-button">Szukaj</button>
+		</React.Fragment>
 	);
 }
 

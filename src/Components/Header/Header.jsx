@@ -17,27 +17,9 @@ function Header(props) {
 			</h1>
 			<NavLink
 				style={{ color: "#e1e1e1", textDecoration: "none" }}
-				to="/hotel-list"
-			>
-				/hotel-list >>
-			</NavLink>
-			<NavLink
-				style={{ color: "#e1e1e1", textDecoration: "none" }}
 				to="/client-data"
 			>
 				/client-data >>
-			</NavLink>
-			<NavLink
-				style={{ color: "#e1e1e1", textDecoration: "none" }}
-				to="/purchase"
-			>
-				/purchase >>
-			</NavLink>
-			<NavLink
-				style={{ color: "#e1e1e1", textDecoration: "none" }}
-				to="/finalize"
-			>
-				/finalize >>
 			</NavLink>
 			<NavLink
 				style={{ color: "#e1e1e1", textDecoration: "none" }}
