@@ -18,4 +18,12 @@
 
 .clientData label {
 	margin-top: 0.5rem;
+	font-weight: bold;
+	text-align: center;
+}
+
+@media (max-width: 768px) {
+	.clientData label {
+		font-size: 0.8rem;
+	}
 }

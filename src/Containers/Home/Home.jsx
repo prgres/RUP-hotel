@@ -1,6 +1,7 @@
 import React from "react";
 import SearchForm from "../../Components/SearchForm/SearchForm";
 import "./Home.css";
+import HotelTable from "../../Components/HotelTable/HotelTable";
 
 class Home extends React.Component {
 	constructor(props) {
@@ -35,6 +36,11 @@ class Home extends React.Component {
 					options={this.state.chosenRoomOptions}
 					chooseRoomOptionHandler={this.chooseRoomOptionHandler}
 				/>
+				<div className="hotel-recommendations">
+					<HotelTable />
+					<p>Łączna kwota: $milion</p>
+					<button>Przejdź dalej</button>
+				</div>
 			</div>
 		);
 	}

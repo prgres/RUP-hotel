@@ -1,8 +1,26 @@
+.home-form {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	justify-items: center;
+	grid-gap: 2rem;
+}
+
+.home-form input[type="date"] {
+	width: 90%;
+	height: 30px;
+}
+
+.home-form-heading {
+	margin: 1rem 0;
+}
+
+.home-form-button {
+	margin-top: 54px;
+}
+
 @media (max-width: 768px) {
 	.home-form input[type="date"] {
-		margin-bottom: 0.5rem;
 		height: 1rem;
-		width: 50%;
-		margin: 0.5rem auto;
+		width: 100%;
 	}
 }
