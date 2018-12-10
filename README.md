@@ -50,7 +50,7 @@ uwagi w [].
 [...]
 ```
 
-## Obsługa Git-a
+## Obsługa Git-a (BARDZO uproszczona jeżeli nie wiesz co robić)
 
 Forkujemy repozytorium: https://github.com/michalStarski/RUP-hotel
 
