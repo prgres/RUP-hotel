@@ -1,6 +1,6 @@
-# Dokumentacja w Markdown
+#  Dokumentacja w Markdown
 
-## Instalacja:
+##  Instalacja:
 
 Piszemy w markdown. Prosty edytor markdowna znajduje sie pod: https://github.com/marktext/marktext/releases
 
@@ -10,7 +10,7 @@ Po pobraniu całość jest gotowa do użytku.
 
 * * *
 
-## Szablon dokumentów:
+## Szablon dokumentów:
 
 uwagi w [].
 
