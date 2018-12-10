@@ -24,7 +24,7 @@
 
 Zwraca listę wolnych pokoi w oparciu o podane kryteria.
 
-```json
+```
 {
     from: Date,
     to: Date,
@@ -34,7 +34,7 @@ Zwraca listę wolnych pokoi w oparciu o podane kryteria.
 
 Odpowiedź
 
-```json
+```
 {
     rooms: [
         {
@@ -55,7 +55,7 @@ Odpowiedź
 
 Zwraca JSON web token w opaciu o dane użytkownika
 
-```json
+```
 {
     name: String,
     surname: String,
@@ -66,7 +66,7 @@ Zwraca JSON web token w opaciu o dane użytkownika
 
 Odpowiedź:
 
-```json
+```
 {
     token: String
 }
