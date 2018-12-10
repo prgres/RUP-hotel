@@ -182,6 +182,6 @@ Klient poprawnie wykonał płatność. Zostaje przekierowany do strony rezerwacj
 
 Prototyp strony rezerwacji.
 
-![5c0e7ec7090e1](https://i.loli.net/2018/12/10/5c0e7ec7090e1.png)<img src="RUP1.png/>
+![5c0e7ec7090e1](https://i.loli.net/2018/12/10/5c0e7ec7090e1.png)
 
 ![5c0e81a0bfc7a](https://i.loli.net/2018/12/10/5c0e81a0bfc7a.png)
