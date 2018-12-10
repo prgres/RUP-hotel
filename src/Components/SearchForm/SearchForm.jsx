@@ -9,8 +9,18 @@ function SearchForm(props) {
 				1. Wybierz termin który Cię interesuje
 			</h3>
 			<form className="home-form">
-				<input type="date" placeholder="Data przyjazdu" />
-				<input type="date" placeholder="Data wyjazdu" />
+				<label htmlFor="date-from">
+					<strong>Data przyjazdu</strong>
+					<input
+						type="date"
+						id="date-from"
+						placeholder="Data przyjazdu"
+					/>
+				</label>
+				<label htmlFor="date-to">
+					<strong>Data wyjazdu</strong>
+					<input type="date" placeholder="Data wyjazdu" />
+				</label>
 				<div>
 					<h3 className="home-form-heading">
 						2. Wybierz liczbę osób
