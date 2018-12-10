@@ -104,18 +104,15 @@
 | Potrzeby  | Struktura umożliwiająca sprawdzanie, czy w danym terminie jest dostępny pokój danego typu.                |
 | Zadania   | Znajdowanie wolnych pokoi zadanego typu w zadanym terminie.                                               |
 | Źródło    | INTP 002 Przedstawiciel zleceniodawcy                                                                     |
-| Priorytet | normalny                                                                                                  |
+| Priorytet | normalny
 
-| ISYS 002 | API                                                                                    |
-| -------- | -------------------------------------------------------------------------------------- |
-| Opis     | API komunikujące się pomiędzy stroną rejestracji, a stroną płatności za pokój w hotelu |
-| Potrzeby | Przekazywania danych klienta pomiędzy stronami rejestracji i płatności                 |
-| Zadania  | Przekazać kwotę, jaką należy zapłacić za pokoje.                                       |
-
-<br/>Przekazanie unikalnego kodu weryfikującego płatność. 
-<br/>W razie niepowodzenia lub powodzenia płatności przekierowanie na stronę rezerwacji z odpowiednim komunikatem. |
-| Źródło    | INTP 002 Przedstawiciel zleceniodawcy                                                                                                                                                                                           |
-| Priorytet | normalny                                                                                                                                                                                                                        |
+| ISYS 002  | **API** |
+| --------- | ------- |
+| Opis      | API komunikujące się pomiędzy stroną rejestracji a stroną płatności za pokój w hotelu. |
+| Potrzeby  | Przekazywanie danych klienta pomiędzy stronami rejestracji i płatności. |
+| Zadania   | Przekazać kwotę, jaką należy zapłacić za pokoje.<br/> Przekazanie unikalnego kodu weryfikującego płatność. W razie niepowodzenia lub powodzenia płatności przekierowanie na stronę rezerwacji z odpowiednim komunikatem. |
+| Źródło    | INTP 002 Przedstawiciel zleceniodawcy |
+| Priorytet | Normalny |                                                                                                                      
 
 ## Przewidywane komponenty systemu
 
