@@ -1,6 +1,6 @@
 # Ogólny model informacyjny
 
-## RUP Hotel
+## RUP-Hotel
 
 ### Autor: Katarzyna Makohon, Jędrzej Nowak, Michał Starski
 
