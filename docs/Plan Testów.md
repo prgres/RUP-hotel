@@ -1,6 +1,6 @@
 # Plan testów
 
-## RUP Hotel
+## RUP-Hotel
 
 ### Autor: Mateusz Lesiecki
 
