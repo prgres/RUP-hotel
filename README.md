@@ -17,47 +17,25 @@ uwagi w [].
 ```markdown
 # [Tytuł dokumentu]
 
-
-
 ## RUP Hotel
-
-
 
 ### Autor:
 
-
-
 ### Korekta: 
-
-
 
 ### Wersja:
 
-
-
 ### Data:
-
-
 
 ### Kierownik Projektu: Michał Starski
 
-
-
 ---
-
-
 
 ## Spis treści:
 
-
-
 1. Punkt 1
 
-
-
 2. Punkt 2
-
-
 
 3. Punkt 3
 [...]
@@ -78,13 +56,13 @@ Forkujemy repozytorium: https://github.com/michalStarski/RUP-hotel
 
 Komendy w Git Bash:
 
-> git clone <link do forka>
+> git clone _link do forka_
 
 Klonujemy repozytorium.
 
 Dodaj nowego branch'a.
 
-> git checkout -b <nazwa branch'a>
+> git checkout -b _nazwa brancha_
 
 Zastosuj zmiany.
 
@@ -96,9 +74,9 @@ Jezeli wszystko się zgadza zacommituj i zpushuj zmiany.
 
 > git add .
 
-> git commit -am "<nazwa commita>"
+> git commit -am _"nazwa commita"_
 
-> git push origin <nazwa branch'a>
+> git push origin _nazwa branch'a_
 
 Możliwe, że bedziesz musiał zalogowac sie na swoje konto github.
 
