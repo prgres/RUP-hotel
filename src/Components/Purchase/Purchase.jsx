@@ -7,7 +7,7 @@ function Purchase(props) {
 				textAlign: "center",
 				margin: "2rem auto",
 				width: "90vw",
-				height: "50vh",
+				height: "40vh",
 				backgroundColor: "rgba(0,0,0,.3)",
 				padding: "1rem",
 			}}
