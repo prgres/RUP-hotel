@@ -13,5 +13,10 @@ public class AvailableRoomsRequest {
     private int amountOfPeople;
     private Date arrival;
     private Date departure;
+
+//    @ModelAttribute("availableRoomsRequestModelAttribute")
+//    public AvailableRoomsRequest availableRoomsRequest(){
+//        return new AvailableRoomsRequest();
+//    }
 }
 

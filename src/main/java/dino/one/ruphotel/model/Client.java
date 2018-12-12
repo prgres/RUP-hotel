@@ -14,6 +14,8 @@ import java.util.Set;
 @Entity
 @Table(name = "CLIENT")
 public class Client {
+    @Transient
+    private AvailableRoomsRequest availableRoomsRequest;
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
@@ -40,4 +42,5 @@ public class Client {
             mappedBy = "client",
             fetch = FetchType.LAZY)
     private Set<Reservation> reservationSet;
+
 }

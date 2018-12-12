@@ -1,9 +1,6 @@
 package dino.one.ruphotel.service;
 
-import dino.one.ruphotel.model.Client;
-import dino.one.ruphotel.model.NewClientRequest;
-import dino.one.ruphotel.model.Reservation;
-import dino.one.ruphotel.model.Room;
+import dino.one.ruphotel.model.*;
 import org.springframework.stereotype.Service;
 
 import javax.persistence.EntityManager;
@@ -23,7 +20,8 @@ public class UserServiceImpl {
     @PersistenceContext
     EntityManager entityManager;
 
-    public void createUser(NewClientRequest newClientRequest) {
+    public void createUser(NewClientRequest newClientRequest,
+                           AvailableRoomsRequest availableRoomsRequest) {
         Client client = new Client();
         entityManager.setFlushMode(FlushModeType.COMMIT);
 
@@ -32,18 +30,26 @@ public class UserServiceImpl {
         client.setId_number(newClientRequest.getIdentity());
 
         client.getReservationSet().
-                add(createReservation(newClientRequest.getRooms())
+                add(createReservation(newClientRequest.getRooms(),
+                        availableRoomsRequest)
                 );
 
         entityManager.persist(client);
+        entityManager.flush(); //TODO remove in master
     }
 
-    private Reservation createReservation(ArrayList<Room> roomIterable) {
+    private Reservation createReservation(ArrayList<Room> roomIterable,
+                                          AvailableRoomsRequest availableRoomsRequest) {
 
         Reservation reservation = new Reservation();
 
         reservation.setRoomSet(new HashSet<>(roomIterable));
+        reservation.setArrival(availableRoomsRequest.getArrival());
+        reservation.setDeparture(availableRoomsRequest.getDeparture());
+//        reservation.set
+
         entityManager.persist(reservation);
+        entityManager.flush(); //TODO remove in master
 
         return reservation;
     }
