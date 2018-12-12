@@ -1,7 +1,6 @@
 package dino.one.ruphotel.model;
 
 import lombok.Data;
-import org.springframework.data.annotation.Id;
 
 import javax.persistence.*;
 import java.util.Date;
@@ -20,8 +19,9 @@ public class Reservation {
     @Column(name = "reservationID")
     private int id;
 
-    @Column(name = "room")
-    private int room;
+//    @OneToOne(cascade = CascadeType.ALL)
+//    @JoinColumn(name = "room_id", referencedColumnName = "room_number")
+//    private Room room;
 
     @Column(name = "arrival")
     private Date arrival;
@@ -29,7 +29,16 @@ public class Reservation {
     @Column(name = "departure")
     private Date departure;
 
-    @OneToOne(cascade = CascadeType.ALL)
-    @JoinColumn(name = "clientID", referencedColumnName = "id")
+    @ManyToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name = "clientID", referencedColumnName = "clientID")
     private Client client;
+
+    @ManyToMany(cascade = CascadeType.ALL)
+    @JoinTable(
+            name = "room_list",
+            joinColumns = {@JoinColumn(name = "reservationID")},
+            inverseJoinColumns = {@JoinColumn(name = "room_number")})
+    private Iterable<Room> roomSet;
+
 }
+
