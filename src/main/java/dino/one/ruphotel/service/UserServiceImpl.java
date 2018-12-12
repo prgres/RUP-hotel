@@ -9,6 +9,8 @@ import org.springframework.stereotype.Service;
 import javax.persistence.EntityManager;
 import javax.persistence.FlushModeType;
 import javax.persistence.PersistenceContext;
+import java.util.ArrayList;
+import java.util.HashSet;
 
 /**
  * Created by prgres on 2018-12-12.
@@ -36,11 +38,11 @@ public class UserServiceImpl {
         entityManager.persist(client);
     }
 
-    private Reservation createReservation(Iterable<Room> roomIterable) {
+    private Reservation createReservation(ArrayList<Room> roomIterable) {
 
         Reservation reservation = new Reservation();
 
-        reservation.setRoomSet(roomIterable);
+        reservation.setRoomSet(new HashSet<>(roomIterable));
         entityManager.persist(reservation);
 
         return reservation;

@@ -2,6 +2,8 @@ package dino.one.ruphotel.model;
 
 import lombok.Data;
 
+import java.util.ArrayList;
+
 /**
  * Created by prgres on 2018-12-12.
  */
@@ -12,6 +14,6 @@ public class NewClientRequest {
     private String name;
     private String surname;
     private String identity;
-    private Iterable<Room> rooms;
+    private ArrayList<Room> rooms;
 
 }

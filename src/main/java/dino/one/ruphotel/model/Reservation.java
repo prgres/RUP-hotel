@@ -4,6 +4,7 @@ import lombok.Data;
 
 import javax.persistence.*;
 import java.util.Date;
+import java.util.Set;
 
 /**
  * Created by prgres on 2018-12-10.
@@ -38,7 +39,7 @@ public class Reservation {
             name = "room_list",
             joinColumns = {@JoinColumn(name = "reservationID")},
             inverseJoinColumns = {@JoinColumn(name = "room_number")})
-    private Iterable<Room> roomSet;
+    private Set<Room> roomSet;
 
 }
 

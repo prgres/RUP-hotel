@@ -4,6 +4,7 @@ import lombok.Data;
 
 import javax.persistence.*;
 import java.math.BigDecimal;
+import java.util.Set;
 
 /**
  * Created by prgres on 2018-12-10.
@@ -26,6 +27,6 @@ public class Room {
     @JoinColumn(name = "room_type", referencedColumnName = "roomtypeID")
     private RoomType roomType;
 
-    @OneToOne(mappedBy = "room")
-    private Reservation reservation;
+    @ManyToMany(mappedBy = "roomSet")
+    private Set<Reservation> reservation;
 }
