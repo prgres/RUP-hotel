@@ -20,21 +20,21 @@ public class Reservation {
     @Column(name = "reservationID")
     private int id;
 
-//    @OneToOne(cascade = CascadeType.ALL)
-//    @JoinColumn(name = "room_id", referencedColumnName = "room_number")
-//    private Room room;
-
-    @Column(name = "arrival")
+    @Column(name = "from")
     private Date arrival;
 
-    @Column(name = "departure")
+    @Column(name = "to")
     private Date departure;
 
-    @ManyToOne(fetch = FetchType.LAZY)
+    @ManyToOne(
+            fetch = FetchType.LAZY,
+            cascade = CascadeType.ALL)
     @JoinColumn(name = "clientID", referencedColumnName = "clientID")
     private Client client;
 
-    @ManyToMany(cascade = CascadeType.ALL)
+    @ManyToMany(
+            cascade = CascadeType.ALL,
+            fetch = FetchType.LAZY)
     @JoinTable(
             name = "room_list",
             joinColumns = {@JoinColumn(name = "reservationID")},

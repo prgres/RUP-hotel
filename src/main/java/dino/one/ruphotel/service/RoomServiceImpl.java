@@ -1,7 +1,5 @@
 package dino.one.ruphotel.service;
 
-import dino.one.ruphotel.model.AvailableRoomsRequest;
-import dino.one.ruphotel.model.Room;
 import dino.one.ruphotel.repository.RoomRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -19,7 +17,7 @@ public class RoomServiceImpl implements RoomService {
         this.roomRepository = roomRepository;
     }
 
-    public Iterable<Room> findAvaibleRooms(AvailableRoomsRequest availableRoomsRequest) {
-        return roomRepository.findAllByReservation_ArrivalLessThanEqualAndReservation_ArrivalGreaterThanEqual(availableRoomsRequest.getDeparture(), availableRoomsRequest.getArrival());
-    }
+//    public List<Room> findAvaibleRooms(AvailableRoomsRequest availableRoomsRequest) {
+//        return roomRepository.findAllByReservation_ArrivalLessThanEqualAndReservation_ArrivalGreaterThanEqual(availableRoomsRequest.getTo(), availableRoomsRequest.getFrom());
+//    }
 }

@@ -7,7 +7,6 @@ import javax.persistence.EntityManager;
 import javax.persistence.FlushModeType;
 import javax.persistence.PersistenceContext;
 import java.util.ArrayList;
-import java.util.HashSet;
 
 /**
  * Created by prgres on 2018-12-12.
@@ -29,13 +28,13 @@ public class UserServiceImpl {
         client.setSurname(newClientRequest.getSurname());
         client.setId_number(newClientRequest.getIdentity());
 
-        client.getReservationSet().
-                add(createReservation(newClientRequest.getRooms(),
-                        availableRoomsRequest)
-                );
+//        client.getReservationSet().
+//                add(createReservation(newClientRequest.getRooms(),
+//                        availableRoomsRequest)
+//                );
 
         entityManager.persist(client);
-        entityManager.flush(); //TODO remove in master
+        entityManager.flush();
     }
 
     private Reservation createReservation(ArrayList<Room> roomIterable,
@@ -43,13 +42,13 @@ public class UserServiceImpl {
 
         Reservation reservation = new Reservation();
 
-        reservation.setRoomSet(new HashSet<>(roomIterable));
-        reservation.setArrival(availableRoomsRequest.getArrival());
-        reservation.setDeparture(availableRoomsRequest.getDeparture());
+//        reservation.setRoomSet(new HashSet<>(roomIterable));
+        reservation.setArrival(availableRoomsRequest.getFrom());
+        reservation.setDeparture(availableRoomsRequest.getTo());
 //        reservation.set
 
         entityManager.persist(reservation);
-        entityManager.flush(); //TODO remove in master
+        entityManager.flush();
 
         return reservation;
     }

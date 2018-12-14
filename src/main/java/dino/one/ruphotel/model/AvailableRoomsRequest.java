@@ -1,6 +1,7 @@
 package dino.one.ruphotel.model;
 
-import lombok.Data;
+import lombok.Getter;
+import lombok.Setter;
 
 import java.util.Date;
 
@@ -8,15 +9,18 @@ import java.util.Date;
  * Created by prgres on 2018-12-11.
  */
 
-@Data
+@Getter
+@Setter
 public class AvailableRoomsRequest {
-    private int amountOfPeople;
-    private Date arrival;
-    private Date departure;
+    private Date from;
+    private Date to;
+    private int personCount;
 
-//    @ModelAttribute("availableRoomsRequestModelAttribute")
-//    public AvailableRoomsRequest availableRoomsRequest(){
-//        return new AvailableRoomsRequest();
-//    }
+    @Override
+    public String toString() {
+        return "from: " + from + " to: " + to + "amountOfPeople" + personCount;
+    }
+
 }
+
 

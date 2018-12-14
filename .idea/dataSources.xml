@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DataSourceManagerImpl" format="xml" multifile-model="true">
+    <data-source source="LOCAL" name="s434805_ino@postgresql.wmi.amu.edu.pl" uuid="2ebb68a9-f284-44f8-8344-9c5ea8611f29">
+      <driver-ref>postgresql</driver-ref>
+      <synchronize>true</synchronize>
+      <jdbc-driver>org.postgresql.Driver</jdbc-driver>
+      <jdbc-url>jdbc:postgresql://postgresql.wmi.amu.edu.pl:5432/s434805_ino</jdbc-url>
+    </data-source>
+  </component>
+</project>
