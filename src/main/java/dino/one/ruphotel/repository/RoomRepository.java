@@ -15,6 +15,8 @@ import java.util.List;
 public interface RoomRepository extends CrudRepository<Room, Long> {
     List<Room> findAll();
 
-    List<Room> findAllByReservation_ArrivalLessThanEqualAndReservation_ArrivalGreaterThanEqual(Date endDate, Date startDate);
+    List<Room> findAllByReservation_ArrivalLessThanEqualOrReservation_DepartureGreaterThanEqualOrReservation_ArrivalIsNullOrReservation_DepartureIsNull(Date endDate, Date startDate);
+
+
 }
 

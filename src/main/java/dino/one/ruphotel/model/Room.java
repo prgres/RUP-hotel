@@ -1,8 +1,8 @@
 package dino.one.ruphotel.model;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import lombok.Getter;
 import lombok.Setter;
-import lombok.ToString;
 
 import javax.persistence.*;
 import java.io.Serializable;
@@ -16,7 +16,7 @@ import java.util.List;
 
 @Getter
 @Setter
-@ToString
+//@ToString
 @Entity
 @Table(name = "ROOMS")
 public class Room implements Serializable {
@@ -35,7 +35,12 @@ public class Room implements Serializable {
     @JoinColumn(name = "room_type", referencedColumnName = "id")
     private RoomType roomType;
 
+    @JsonIgnore
     @ManyToMany(mappedBy = "roomList")
     private List<Reservation> reservation = new ArrayList<>();
 
+    @Override
+    public String toString() {
+        return "id: " + id;
+    }
 }

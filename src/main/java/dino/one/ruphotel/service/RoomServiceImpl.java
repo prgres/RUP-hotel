@@ -1,6 +1,5 @@
 package dino.one.ruphotel.service;
 
-import dino.one.ruphotel.model.Reservation;
 import dino.one.ruphotel.model.Room;
 import dino.one.ruphotel.model.RoomType;
 import dino.one.ruphotel.model.dto.AvailableRoomsDto;
@@ -12,6 +11,7 @@ import org.springframework.transaction.annotation.Transactional;
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
 import java.math.BigDecimal;
+import java.util.ArrayList;
 import java.util.List;
 
 /**
@@ -26,7 +26,6 @@ public class RoomServiceImpl implements RoomService {
     @PersistenceContext
     EntityManager entityManager;
 
-
     @Autowired
     public RoomServiceImpl(RoomRepository roomRepository) {
         this.roomRepository = roomRepository;
@@ -37,25 +36,38 @@ public class RoomServiceImpl implements RoomService {
     }
 
     public Room testmethod() {
-        entityManager.getTransaction().begin();
         Room temp = new Room();
-        Reservation reservation = new Reservation();
 
         temp.setId(6L);
         temp.setPrice(BigDecimal.valueOf(1243124));
         temp.setRoomType(entityManager.getReference(RoomType.class, 2L));
 
         roomRepository.save(temp);
-//        entityManager.persist(temp);
-//        entityManager.flush();
-        entityManager.merge(temp);
-        entityManager.getTransaction().commit();
         return temp;
+    }
+
+    public List<Room> find(AvailableRoomsDto availableRoomsDto) {
+        List<Room> allRooms = roomRepository.findAll();
+        System.out.println(allRooms);
+
+        List<Room> avaible = new ArrayList<>();
+        allRooms.forEach(e -> {
+            e.getReservation().forEach(f -> {
+                if (
+                        ((availableRoomsDto.getTo().before(f.getArrival())) || (availableRoomsDto.getFrom().after(f.getDeparture()))) ||
+                                (f.getArrival() == null) || (f.getDeparture() == null)) {
+                    avaible.add(e);
+                    System.out.println(e);
+                }
+            });
+        });
+
+        return avaible;
     }
 
     public List<Room> findAvailableRooms(AvailableRoomsDto availableRoomsDto) {
         return roomRepository.
-                findAllByReservation_ArrivalLessThanEqualAndReservation_ArrivalGreaterThanEqual(
+                findAllByReservation_ArrivalLessThanEqualOrReservation_DepartureGreaterThanEqualOrReservation_ArrivalIsNullOrReservation_DepartureIsNull(
                         availableRoomsDto.getTo(),
                         availableRoomsDto.getFrom()
                 );

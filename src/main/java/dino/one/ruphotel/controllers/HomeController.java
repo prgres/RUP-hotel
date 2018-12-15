@@ -37,13 +37,6 @@ public class HomeController {
         return "redirect:/index.html";
     }
 
-    @GetMapping(value = "/test")
-    public @ResponseBody
-    AvailableRoomsDto test(@RequestBody AvailableRoomsDto availableRoomsDto) {
-
-        roomService.testmethod();
-        return availableRoomsDto;
-    }
 
     @PutMapping(value = "/test2")
     public @ResponseBody
@@ -60,8 +53,21 @@ public class HomeController {
 //        availableRoomsRequestModelAttribute.setTo(availableRoomsDto.getTo());
 //        availableRoomsRequestModelAttribute.setAmountOfPeople(availableRoomsDto.getAmountOfPeople());
 
-        return roomService.findAll();
-//        return roomService.findAvailableRooms(availableRoomsDto);
+//        return roomService.findAll();
+        return roomService.findAvailableRooms(availableRoomsDto);
+
+    }
+
+    @PostMapping(value = "/roomsHelp")
+//    public List<Room> rooms(@RequestBody AvailableRoomsDto availableRoomsDto) {
+    public @ResponseBody
+    Iterable<Room> roomsHelp(@RequestBody AvailableRoomsDto availableRoomsDto) {
+//        availableRoomsRequestModelAttribute.setFrom(availableRoomsDto.getFrom());
+//        availableRoomsRequestModelAttribute.setTo(availableRoomsDto.getTo());
+//        availableRoomsRequestModelAttribute.setAmountOfPeople(availableRoomsDto.getAmountOfPeople());
+
+//        return roomService.findAll();
+        return roomService.find(availableRoomsDto);
 
     }
 

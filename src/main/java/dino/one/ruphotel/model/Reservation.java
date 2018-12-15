@@ -1,5 +1,6 @@
 package dino.one.ruphotel.model;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import lombok.Data;
 import org.springframework.format.annotation.DateTimeFormat;
 
@@ -17,27 +18,32 @@ import java.util.List;
 @Table(name = "RESERVATIONS")
 public class Reservation {
 
+    @JsonIgnore
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     @Column(name = "id")
     private Long id;
 
+    @JsonIgnore
     @Column(name = "arrival")
     @Temporal(TemporalType.DATE)
     @DateTimeFormat(pattern = "yyyy-MM-dd")
     private Date arrival;
 
+    @JsonIgnore
     @Column(name = "departure")
     @Temporal(TemporalType.DATE)
     @DateTimeFormat(pattern = "yyyy-MM-dd")
     private Date departure;
 
+    @JsonIgnore
     @ManyToOne(
             fetch = FetchType.LAZY,
             cascade = CascadeType.ALL)
     @JoinColumn(name = "client_id", referencedColumnName = "id")
     private Client client;
 
+    @JsonIgnore
     @ManyToMany(
             cascade = CascadeType.ALL,
             fetch = FetchType.LAZY)
