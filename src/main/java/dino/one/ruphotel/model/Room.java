@@ -1,8 +1,11 @@
 package dino.one.ruphotel.model;
 
-import lombok.Data;
+import lombok.Getter;
+import lombok.Setter;
+import lombok.ToString;
 
 import javax.persistence.*;
+import java.io.Serializable;
 import java.math.BigDecimal;
 import java.util.ArrayList;
 import java.util.List;
@@ -11,12 +14,15 @@ import java.util.List;
  * Created by prgres on 2018-12-10.
  */
 
-@Data
+@Getter
+@Setter
+@ToString
 @Entity
-@Table(name = "ROOM")
-public class Room {
+@Table(name = "ROOMS")
+public class Room implements Serializable {
 
     @Id
+//    @GeneratedValue
     @Column(name = "id")
     private Long id;
 

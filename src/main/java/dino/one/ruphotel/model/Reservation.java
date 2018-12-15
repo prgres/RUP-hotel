@@ -14,13 +14,13 @@ import java.util.List;
 
 @Data
 @Entity
-@Table(name = "RESERVATION")
+@Table(name = "RESERVATIONS")
 public class Reservation {
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     @Column(name = "id")
-    private int id;
+    private Long id;
 
     @Column(name = "arrival")
     @Temporal(TemporalType.DATE)

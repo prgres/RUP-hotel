@@ -10,9 +10,6 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
 
-import java.util.ArrayList;
-import java.util.List;
-
 //Serve React Frontend on the '/' route
 
 @Controller
@@ -35,49 +32,46 @@ public class HomeController {
         this.tokenGeneratorService = tokenGeneratorService;
     }
 
-
     @RequestMapping(value = "/")
     public String index() {
         return "redirect:/index.html";
     }
 
-    @GetMapping
+    @GetMapping(value = "/test")
     public @ResponseBody
-    String test() {
+    AvailableRoomsDto test(@RequestBody AvailableRoomsDto availableRoomsDto) {
 
         roomService.testmethod();
+        return availableRoomsDto;
+    }
 
-        //        entityManager.
-        return "good";
+    @PutMapping(value = "/test2")
+    public @ResponseBody
+    Room test2(@RequestBody AvailableRoomsDto availableRoomsDto) {
+        return roomService.testmethod();
+
     }
 
     @PostMapping(value = "/rooms")
-    public List<Room> postRoom(
-//    public List<Room> postRoom(@ModelAttribute("availableRoomsRequestModelAttribute") AvailableRoomsDto availableRoomsRequestModelAttribute,
-            @RequestBody AvailableRoomsDto availableRoomsDto) {
+//    public List<Room> rooms(@RequestBody AvailableRoomsDto availableRoomsDto) {
+    public @ResponseBody
+    Iterable<Room> rooms(@RequestBody AvailableRoomsDto availableRoomsDto) {
 //        availableRoomsRequestModelAttribute.setFrom(availableRoomsDto.getFrom());
 //        availableRoomsRequestModelAttribute.setTo(availableRoomsDto.getTo());
 //        availableRoomsRequestModelAttribute.setAmountOfPeople(availableRoomsDto.getAmountOfPeople());
 
-//        Lists.newArrayList(iterable).size();
+        return roomService.findAll();
+//        return roomService.findAvailableRooms(availableRoomsDto);
 
-//        if (roomService.findAvaibleRooms(availableRoomsDto))
-//        return roomService.findAvaibleRooms(availableRoomsDto);
-        List<Room> asd = new ArrayList<>();
-
-        return asd;
     }
 
-    @ResponseBody
-    @PostMapping(value = "/generate-token", produces = "application/json")
-    public String generateToken(@RequestBody NewClientDto newClientDto) {
+    @PostMapping(value = "/generate-token")
+    public @ResponseBody
+    NewClientDto generateToken(@RequestBody NewClientDto newClientDto) {
 //    public String generateToken(@SessionAttribute("availableRoomsRequestModelAttribute") AvailableRoomsDto availableRoomsRequestModelAttribute,
 //                                @RequestBody NewClientDto newClientDto) {
 //        userService.createUser(newClientDto, availableRoomsRequestModelAttribute);
 //
-        return newClientDto.toString();
-//        return tokenGeneratorService.generateToken();
-//        return availableRoomsDto;
+        return newClientDto;
     }
-
 }

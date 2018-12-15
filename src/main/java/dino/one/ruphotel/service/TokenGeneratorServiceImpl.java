@@ -7,7 +7,7 @@ import org.springframework.stereotype.Service;
  */
 
 @Service
-public class TokenGeneratorServiceImpl {
+public class TokenGeneratorServiceImpl implements TokenGeneratorService {
 
     public String generateToken() {
         return null;
