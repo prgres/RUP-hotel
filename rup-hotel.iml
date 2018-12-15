@@ -5,7 +5,7 @@
       <configuration>
         <setting name="validation-enabled" value="true" />
         <datasource-mapping>
-          <factory-entry name="entityManagerFactory" />
+          <factory-entry name="entityManagerFactory" value="2ebb68a9-f284-44f8-8344-9c5ea8611f29" />
           <factory-entry name="test" />
         </datasource-mapping>
         <naming-strategy-map />

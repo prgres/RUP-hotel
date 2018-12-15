@@ -5,5 +5,5 @@ package dino.one.ruphotel.service;
  */
 
 public interface RoomService {
-//    List<Room> findAvaibleRooms(AvailableRoomsRequest availableRoomsRequest);
+//    List<Room> findAvaibleRooms(AvailableRoomsDto availableRoomsDto);
 }

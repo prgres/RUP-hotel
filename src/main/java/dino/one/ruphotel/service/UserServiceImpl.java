@@ -1,6 +1,10 @@
 package dino.one.ruphotel.service;
 
-import dino.one.ruphotel.model.*;
+import dino.one.ruphotel.model.Client;
+import dino.one.ruphotel.model.Reservation;
+import dino.one.ruphotel.model.Room;
+import dino.one.ruphotel.model.dto.AvailableRoomsDto;
+import dino.one.ruphotel.model.dto.NewClientDto;
 import org.springframework.stereotype.Service;
 
 import javax.persistence.EntityManager;
@@ -19,18 +23,18 @@ public class UserServiceImpl {
     @PersistenceContext
     EntityManager entityManager;
 
-    public void createUser(NewClientRequest newClientRequest,
-                           AvailableRoomsRequest availableRoomsRequest) {
+    public void createUser(NewClientDto newClientDto,
+                           AvailableRoomsDto availableRoomsDto) {
         Client client = new Client();
         entityManager.setFlushMode(FlushModeType.COMMIT);
 
-        client.setName(newClientRequest.getName());
-        client.setSurname(newClientRequest.getSurname());
-        client.setId_number(newClientRequest.getIdentity());
+        client.setName(newClientDto.getName());
+        client.setSurname(newClientDto.getSurname());
+        client.setId_number(newClientDto.getIdentity());
 
 //        client.getReservationSet().
-//                add(createReservation(newClientRequest.getRooms(),
-//                        availableRoomsRequest)
+//                add(createReservation(newClientDto.getRooms(),
+//                        availableRoomsDto)
 //                );
 
         entityManager.persist(client);
@@ -38,13 +42,13 @@ public class UserServiceImpl {
     }
 
     private Reservation createReservation(ArrayList<Room> roomIterable,
-                                          AvailableRoomsRequest availableRoomsRequest) {
+                                          AvailableRoomsDto availableRoomsDto) {
 
         Reservation reservation = new Reservation();
 
 //        reservation.setRoomSet(new HashSet<>(roomIterable));
-        reservation.setArrival(availableRoomsRequest.getFrom());
-        reservation.setDeparture(availableRoomsRequest.getTo());
+//        reservation.setArrival(availableRoomsDto.getFrom());
+//        reservation.setDeparture(availableRoomsDto.getTo());
 //        reservation.set
 
         entityManager.persist(reservation);

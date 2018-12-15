@@ -1,10 +1,12 @@
 package dino.one.ruphotel.model;
 
 import lombok.Data;
+import org.springframework.format.annotation.DateTimeFormat;
 
 import javax.persistence.*;
+import java.util.ArrayList;
 import java.util.Date;
-import java.util.Set;
+import java.util.List;
 
 /**
  * Created by prgres on 2018-12-10.
@@ -17,29 +19,33 @@ public class Reservation {
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    @Column(name = "reservationID")
+    @Column(name = "id")
     private int id;
 
-    @Column(name = "from")
+    @Column(name = "arrival")
+    @Temporal(TemporalType.DATE)
+    @DateTimeFormat(pattern = "yyyy-MM-dd")
     private Date arrival;
 
-    @Column(name = "to")
+    @Column(name = "departure")
+    @Temporal(TemporalType.DATE)
+    @DateTimeFormat(pattern = "yyyy-MM-dd")
     private Date departure;
 
     @ManyToOne(
             fetch = FetchType.LAZY,
             cascade = CascadeType.ALL)
-    @JoinColumn(name = "clientID", referencedColumnName = "clientID")
+    @JoinColumn(name = "client_id", referencedColumnName = "id")
     private Client client;
 
     @ManyToMany(
             cascade = CascadeType.ALL,
             fetch = FetchType.LAZY)
     @JoinTable(
-            name = "room_list",
-            joinColumns = {@JoinColumn(name = "reservationID")},
-            inverseJoinColumns = {@JoinColumn(name = "room_number")})
-    private Set<Room> roomSet;
+            name = "reservation_room",
+            joinColumns = {@JoinColumn(name = "id")},
+            inverseJoinColumns = {@JoinColumn(name = "number")})
+    private List<Room> roomList = new ArrayList<>();
 
 }
 

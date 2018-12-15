@@ -4,7 +4,8 @@ import lombok.Data;
 
 import javax.persistence.*;
 import javax.validation.constraints.Size;
-import java.util.Set;
+import java.util.ArrayList;
+import java.util.List;
 
 /**
  * Created by prgres on 2018-12-10.
@@ -14,12 +15,12 @@ import java.util.Set;
 @Entity
 @Table(name = "CLIENT")
 public class Client {
-    @Transient
-    private AvailableRoomsRequest availableRoomsRequest;
+//    @Transient
+//    private AvailableRoomsDto availableRoomsDto;
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    @Column(name = "clientID")
+    @Column(name = "id")
     private int id;
 
     @Column(name = "name",
@@ -39,8 +40,7 @@ public class Client {
     private String id_number;
 
     @OneToMany(
-            mappedBy = "client",
             fetch = FetchType.LAZY)
-    private Set<Reservation> reservationSet;
+    private List<Reservation> reservationList = new ArrayList<>();
 
 }

@@ -4,7 +4,8 @@ import lombok.Data;
 
 import javax.persistence.*;
 import java.math.BigDecimal;
-import java.util.Set;
+import java.util.ArrayList;
+import java.util.List;
 
 /**
  * Created by prgres on 2018-12-10.
@@ -16,17 +17,19 @@ import java.util.Set;
 public class Room {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
-    @Column(name = "room_number")
-    private int id;
+    @Column(name = "id")
+    private Long id;
 
     @Column(name = "price")
     private BigDecimal price;
 
-    @OneToOne(cascade = CascadeType.ALL)
-    @JoinColumn(name = "room_type", referencedColumnName = "roomtypeID")
+    @ManyToOne(
+            cascade = CascadeType.ALL,
+            fetch = FetchType.LAZY)
+    @JoinColumn(name = "room_type", referencedColumnName = "id")
     private RoomType roomType;
 
-    @ManyToMany(mappedBy = "roomSet")
-    private Set<Reservation> reservation;
+    @ManyToMany(mappedBy = "roomList")
+    private List<Reservation> reservation = new ArrayList<>();
+
 }

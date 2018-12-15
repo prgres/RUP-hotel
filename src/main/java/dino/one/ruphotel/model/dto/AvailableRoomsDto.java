@@ -1,4 +1,4 @@
-package dino.one.ruphotel.model;
+package dino.one.ruphotel.model.dto;
 
 import lombok.Getter;
 import lombok.Setter;
@@ -11,7 +11,7 @@ import java.util.Date;
 
 @Getter
 @Setter
-public class AvailableRoomsRequest {
+public class AvailableRoomsDto {
     private Date from;
     private Date to;
     private int personCount;

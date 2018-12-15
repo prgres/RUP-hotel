@@ -1,4 +1,4 @@
-package dino.one.ruphotel.model;
+package dino.one.ruphotel.model.dto;
 
 import lombok.Data;
 
@@ -7,7 +7,7 @@ import lombok.Data;
  */
 
 @Data
-public class NewClientRequest {
+public class NewClientDto {
 
     private String name;
     private String surname;

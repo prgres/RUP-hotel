@@ -2,11 +2,10 @@ package dino.one.ruphotel.model;
 
 import lombok.Data;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.Id;
-import javax.persistence.Table;
+import javax.persistence.*;
 import javax.validation.constraints.Size;
+import java.util.ArrayList;
+import java.util.List;
 
 /**
  * Created by prgres on 2018-12-10.
@@ -18,10 +17,14 @@ import javax.validation.constraints.Size;
 public class RoomType {
 
     @Id
-    @Column(name = "roomtypeID")
-    private int id;
+    @Column(name = "id")
+    private Long id;
 
     @Column(name = "room_type")
     @Size(max = 40)
     private String roomType;
+
+    @OneToMany(fetch = FetchType.LAZY)
+    private List<Room> rooms = new ArrayList<>();
+
 }

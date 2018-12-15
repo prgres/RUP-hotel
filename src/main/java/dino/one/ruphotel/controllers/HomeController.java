@@ -1,17 +1,14 @@
 package dino.one.ruphotel.controllers;
 
-import dino.one.ruphotel.model.AvailableRoomsRequest;
-import dino.one.ruphotel.model.NewClientRequest;
 import dino.one.ruphotel.model.Room;
+import dino.one.ruphotel.model.dto.AvailableRoomsDto;
+import dino.one.ruphotel.model.dto.NewClientDto;
 import dino.one.ruphotel.service.RoomServiceImpl;
 import dino.one.ruphotel.service.TokenGeneratorServiceImpl;
 import dino.one.ruphotel.service.UserServiceImpl;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.ResponseBody;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -27,8 +24,8 @@ public class HomeController {
     private final TokenGeneratorServiceImpl tokenGeneratorService;
 
 //    @ModelAttribute("availableRoomsRequestModelAttribute")
-//    public AvailableRoomsRequest availableRoomsRequest() {
-//        return new AvailableRoomsRequest();
+//    public AvailableRoomsDto availableRoomsDto() {
+//        return new AvailableRoomsDto();
 //    }
 
     @Autowired
@@ -38,37 +35,49 @@ public class HomeController {
         this.tokenGeneratorService = tokenGeneratorService;
     }
 
+
     @RequestMapping(value = "/")
     public String index() {
         return "redirect:/index.html";
     }
 
+    @GetMapping
+    public @ResponseBody
+    String test() {
+
+        roomService.testmethod();
+
+        //        entityManager.
+        return "good";
+    }
+
     @PostMapping(value = "/rooms")
     public List<Room> postRoom(
-//    public List<Room> postRoom(@ModelAttribute("availableRoomsRequestModelAttribute") AvailableRoomsRequest availableRoomsRequestModelAttribute,
-            @RequestBody AvailableRoomsRequest availableRoomsRequest) {
-//        availableRoomsRequestModelAttribute.setFrom(availableRoomsRequest.getFrom());
-//        availableRoomsRequestModelAttribute.setTo(availableRoomsRequest.getTo());
-//        availableRoomsRequestModelAttribute.setAmountOfPeople(availableRoomsRequest.getAmountOfPeople());
+//    public List<Room> postRoom(@ModelAttribute("availableRoomsRequestModelAttribute") AvailableRoomsDto availableRoomsRequestModelAttribute,
+            @RequestBody AvailableRoomsDto availableRoomsDto) {
+//        availableRoomsRequestModelAttribute.setFrom(availableRoomsDto.getFrom());
+//        availableRoomsRequestModelAttribute.setTo(availableRoomsDto.getTo());
+//        availableRoomsRequestModelAttribute.setAmountOfPeople(availableRoomsDto.getAmountOfPeople());
 
 //        Lists.newArrayList(iterable).size();
 
-//        if (roomService.findAvaibleRooms(availableRoomsRequest))
-//        return roomService.findAvaibleRooms(availableRoomsRequest);
+//        if (roomService.findAvaibleRooms(availableRoomsDto))
+//        return roomService.findAvaibleRooms(availableRoomsDto);
         List<Room> asd = new ArrayList<>();
+
         return asd;
     }
 
     @ResponseBody
     @PostMapping(value = "/generate-token", produces = "application/json")
-    public String generateToken(@RequestBody NewClientRequest newClientRequest) {
-//    public String generateToken(@SessionAttribute("availableRoomsRequestModelAttribute") AvailableRoomsRequest availableRoomsRequestModelAttribute,
-//                                @RequestBody NewClientRequest newClientRequest) {
-//        userService.createUser(newClientRequest, availableRoomsRequestModelAttribute);
+    public String generateToken(@RequestBody NewClientDto newClientDto) {
+//    public String generateToken(@SessionAttribute("availableRoomsRequestModelAttribute") AvailableRoomsDto availableRoomsRequestModelAttribute,
+//                                @RequestBody NewClientDto newClientDto) {
+//        userService.createUser(newClientDto, availableRoomsRequestModelAttribute);
 //
-        return newClientRequest.toString();
+        return newClientDto.toString();
 //        return tokenGeneratorService.generateToken();
-//        return availableRoomsRequest;
+//        return availableRoomsDto;
     }
 
 }
