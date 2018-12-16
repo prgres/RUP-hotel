@@ -9,11 +9,12 @@ import dino.one.ruphotel.service.UserServiceImpl;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
+import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
 //Serve React Frontend on the '/' route
 
 @Controller
-//@SessionAttributes("availableRoomsRequestModelAttribute")
+//@SessionAttributes("availableRoomsDto")
 public class HomeController {
 
     private final RoomServiceImpl roomService;
@@ -38,46 +39,36 @@ public class HomeController {
     }
 
 
-    @PutMapping(value = "/test2")
+    @PutMapping(value = "/showAll")
     public @ResponseBody
-    Room test2(@RequestBody AvailableRoomsDto availableRoomsDto) {
+    Room showAll(@RequestBody AvailableRoomsDto availableRoomsDto) {
         return roomService.testmethod();
-
     }
 
     @PostMapping(value = "/rooms")
-//    public List<Room> rooms(@RequestBody AvailableRoomsDto availableRoomsDto) {
     public @ResponseBody
-    Iterable<Room> rooms(@RequestBody AvailableRoomsDto availableRoomsDto) {
-//        availableRoomsRequestModelAttribute.setFrom(availableRoomsDto.getFrom());
-//        availableRoomsRequestModelAttribute.setTo(availableRoomsDto.getTo());
-//        availableRoomsRequestModelAttribute.setAmountOfPeople(availableRoomsDto.getAmountOfPeople());
+    Iterable<Room> rooms(
+//            Model model,
+            @RequestBody AvailableRoomsDto availableRoomsDto,
+            final RedirectAttributes redirectAttributes) {
 
-//        return roomService.findAll();
+        redirectAttributes.addFlashAttribute("availableRoomsDto", availableRoomsDto);
+
+
         return roomService.findAvailableRooms(availableRoomsDto);
-
-    }
-
-    @PostMapping(value = "/roomsHelp")
-//    public List<Room> rooms(@RequestBody AvailableRoomsDto availableRoomsDto) {
-    public @ResponseBody
-    Iterable<Room> roomsHelp(@RequestBody AvailableRoomsDto availableRoomsDto) {
-//        availableRoomsRequestModelAttribute.setFrom(availableRoomsDto.getFrom());
-//        availableRoomsRequestModelAttribute.setTo(availableRoomsDto.getTo());
-//        availableRoomsRequestModelAttribute.setAmountOfPeople(availableRoomsDto.getAmountOfPeople());
-
-//        return roomService.findAll();
-        return roomService.find(availableRoomsDto);
-
     }
 
     @PostMapping(value = "/generate-token")
     public @ResponseBody
-    NewClientDto generateToken(@RequestBody NewClientDto newClientDto) {
+    NewClientDto generateToken(
+            @ModelAttribute("availableRoomsDto") AvailableRoomsDto availableRoomsDto,
+            @RequestBody NewClientDto newClientDto) {
 //    public String generateToken(@SessionAttribute("availableRoomsRequestModelAttribute") AvailableRoomsDto availableRoomsRequestModelAttribute,
 //                                @RequestBody NewClientDto newClientDto) {
 //        userService.createUser(newClientDto, availableRoomsRequestModelAttribute);
-//
+
+//        availableRoomsDto.set
+        System.out.println(availableRoomsDto);
         return newClientDto;
     }
 }
