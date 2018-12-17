@@ -87,4 +87,6 @@ public class PaymentsController {
     public void toBeOrNotToBe(@RequestBody ReservationToRemove reservationToRemove) {
         reservationService.deleteById(reservationToRemove.getId());
     }
+
+
 }
