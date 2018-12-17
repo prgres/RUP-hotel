@@ -13,7 +13,8 @@ import java.math.BigDecimal;
 @Service
 public class TokenServiceImpl implements TokenService {
 
-    private String secretKey = "01234567890012345678900123456789012";
+    //    private String secretKey = "01234567890012345678900123456789012";
+    private String secretKey = "012345678900123456789001234567890121942376830674";
 
     public String generateToken(Long id,
                                 String name,

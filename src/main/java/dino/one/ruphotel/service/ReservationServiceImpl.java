@@ -6,6 +6,7 @@ import dino.one.ruphotel.model.persistance.Room;
 import dino.one.ruphotel.repository.ReservationRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 import javax.persistence.EntityManager;
 import javax.persistence.FlushModeType;
@@ -18,7 +19,7 @@ import java.util.List;
  */
 
 @Service
-//@Transactional
+@Transactional
 public class ReservationServiceImpl implements ReservationService {
 
     private final
@@ -43,7 +44,7 @@ public class ReservationServiceImpl implements ReservationService {
         reservation.setArrival(arrival);
         reservation.setDeparture(departure);
         reservation.setClient(client);
-        reservation.getRoomList().addAll(roomList);
+//        reservation.getRoomList().addAll(roomList); //TODO: ad
 
         reservation.getRoomList().forEach(e -> {
             reservation.setPriceForAllRooms(

@@ -5,6 +5,7 @@ import dino.one.ruphotel.model.persistance.Reservation;
 import dino.one.ruphotel.repository.ClientRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 import javax.persistence.EntityManager;
 import javax.persistence.FlushModeType;
@@ -15,7 +16,7 @@ import javax.persistence.PersistenceContext;
  */
 
 @Service
-//@Transactional
+@Transactional
 public class ClientServiceImpl implements ClientService {
 
     private final ClientRepository clientRepository;

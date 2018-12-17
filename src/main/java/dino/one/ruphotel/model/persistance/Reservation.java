@@ -54,6 +54,7 @@ public class Reservation {
             inverseJoinColumns = {@JoinColumn(name = "number")})
     private List<Room> roomList = new ArrayList<>();
 
+    @JsonIgnore
     @Transient
     private BigDecimal priceForAllRooms;
 }
