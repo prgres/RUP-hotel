@@ -43,16 +43,18 @@ public class RoomServiceImpl implements RoomService {
 
         List<Room> avaible = new ArrayList<>();
         allRooms.forEach(e -> {
-            if (e.getReservation().isEmpty()) {
-                avaible.add(e);
-            } else {
-                e.getReservation().forEach(f -> {
-                    if (((availableRoomsDto.getTo().before(f.getArrival()))
-                            || (availableRoomsDto.getFrom().after(f.getDeparture())))) {
-                        avaible.add(e);
-                        System.out.println(e);
-                    }
-                });
+            if (e.getRoomType().getId() >= availableRoomsDto.getPersonCount()) {
+                if (e.getReservation().isEmpty()) {
+                    avaible.add(e);
+                } else {
+                    e.getReservation().forEach(f -> {
+                        if (((availableRoomsDto.getTo().before(f.getArrival()))
+                                || (availableRoomsDto.getFrom().after(f.getDeparture())))) {
+                            avaible.add(e);
+                            System.out.println(e);
+                        }
+                    });
+                }
             }
         });
 
@@ -61,11 +63,22 @@ public class RoomServiceImpl implements RoomService {
 
     @Override
     public List<Room> findAvailableRooms(AvailableRoomsDto availableRoomsDto) {
-        return roomRepository.
+        List<Room> fromRepo = roomRepository.
                 findAllByReservation_ArrivalLessThanEqualOrReservation_DepartureGreaterThanEqualOrReservation_ArrivalIsNullOrReservation_DepartureIsNull(
                         availableRoomsDto.getTo(),
                         availableRoomsDto.getFrom()
                 );
+
+        List<Room> listToReturn = new ArrayList<>();
+
+        fromRepo.forEach(e -> {
+            if (e.getRoomType().getId() >= availableRoomsDto.getPersonCount()) {
+                listToReturn.add(e);
+            }
+        });
+
+        return listToReturn;
+
     }
 
     public Room testmethod() {

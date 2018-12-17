@@ -14,7 +14,7 @@ import java.util.Date;
 public class AvailableRoomsDto {
     private Date from;
     private Date to;
-    private int personCount;
+    private Long personCount;
 
     @Override
     public String toString() {

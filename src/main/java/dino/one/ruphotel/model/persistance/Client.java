@@ -16,6 +16,7 @@ import java.util.List;
 @Entity
 @Table(name = "CLIENT")
 public class Client {
+
     @JsonIgnore
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
@@ -39,7 +40,7 @@ public class Client {
             length = 9,
             nullable = false)
     @Size(max = 9)
-    private String id_number;
+    private String idNumber;
 
     @JsonIgnore
     @OneToMany(

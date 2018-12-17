@@ -9,8 +9,10 @@ import org.springframework.stereotype.Repository;
  */
 
 @Repository
-public interface ClientRepository extends CrudRepository<Client, Long> {
-    Client findById_number(String id_number);
+public interface ClientRepository
+        extends CrudRepository<Client, Long> {
 
-    void deleteById_number(String id_number);
+    Client findByIdNumber(String idNumber);
+
+    void deleteByIdNumber(String idNumber);
 }

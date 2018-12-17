@@ -1,5 +1,7 @@
 package dino.one.ruphotel.repository;
 
+import dino.one.ruphotel.model.persistance.Reservation;
+import org.springframework.data.repository.CrudRepository;
 import org.springframework.stereotype.Repository;
 
 /**
@@ -7,6 +9,8 @@ import org.springframework.stereotype.Repository;
  */
 
 @Repository
-public interface ReservationRepository {
+public interface ReservationRepository
+        extends CrudRepository<Reservation, Long> {
+
     void deleteById(Long id);
 }

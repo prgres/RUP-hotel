@@ -39,7 +39,7 @@ public class ClientServiceImpl implements ClientService {
 
         client.setName(name);
         client.setSurname(surname);
-        client.setId_number(identify);
+        client.setIdNumber(identify);
 
         entityManager.persist(client);
         entityManager.flush();
@@ -59,7 +59,7 @@ public class ClientServiceImpl implements ClientService {
             String name,
             String surname,
             String identify) {
-        Client client = clientRepository.findById_number(identify);
+        Client client = clientRepository.findByIdNumber(identify);
 
         if (client == null) {
             client = createUser(
@@ -74,7 +74,7 @@ public class ClientServiceImpl implements ClientService {
 
     @Override
     public void deleteByIdNumber(String id_nubmer) {
-        clientRepository.deleteById_number(id_nubmer);
+        clientRepository.deleteByIdNumber(id_nubmer);
     }
 }
 

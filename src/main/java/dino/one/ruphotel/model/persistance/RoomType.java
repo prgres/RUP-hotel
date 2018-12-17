@@ -1,5 +1,6 @@
 package dino.one.ruphotel.model.persistance;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import lombok.Data;
 
 import javax.persistence.*;
@@ -24,6 +25,7 @@ public class RoomType {
     @Size(max = 40)
     private String roomType;
 
+    @JsonIgnore
     @OneToMany(fetch = FetchType.LAZY)
     private List<Room> rooms = new ArrayList<>();
 
