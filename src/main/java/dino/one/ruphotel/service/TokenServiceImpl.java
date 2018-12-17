@@ -1,6 +1,5 @@
 package dino.one.ruphotel.service;
 
-import dino.one.ruphotel.model.DeserializedToken;
 import io.jsonwebtoken.Jwts;
 import org.springframework.stereotype.Service;
 
@@ -32,18 +31,5 @@ public class TokenServiceImpl implements TokenService {
                 signWith(io.jsonwebtoken.SignatureAlgorithm.HS256, secretKey).
                 compact();
         return jwt;
-    }
-
-    public DeserializedToken deserializedToken(String token) {
-        DeserializedToken deserializedToken = new DeserializedToken();
-
-//        Claims claims = Jwts.parser().
-//                setSigningKey(secretKey).
-//                parseClaimsJws(token).
-//                getBody();
-
-//        deserializedToken.setId(Long.valueOf(claims.getId()));
-//        deserializedToken.setName(claims.getAudience());
-        return deserializedToken;
     }
 }

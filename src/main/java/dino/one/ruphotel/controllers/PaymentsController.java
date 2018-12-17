@@ -10,15 +10,13 @@ import dino.one.ruphotel.service.TokenServiceImpl;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpEntity;
 import org.springframework.http.HttpHeaders;
-import org.springframework.http.HttpMethod;
 import org.springframework.http.MediaType;
+import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.client.RestTemplate;
-
-import java.util.Arrays;
 
 /**
  * Created by prgres on 2018-12-17.
@@ -71,16 +69,26 @@ public class PaymentsController {
                 client.getIdNumber(),
                 reservation.getPriceForAllRooms());
 
+        System.out.println("generete-token " + token);
+
+
         HttpHeaders headers = new HttpHeaders();
-        headers.setAccept(Arrays.asList(MediaType.APPLICATION_JSON));
+        headers.setContentType(MediaType.APPLICATION_JSON);
         HttpEntity<String> entity = new HttpEntity<>(token, headers);
-
-
-        return restTemplate.exchange(
-                "http://localhost:8080/products",
-                HttpMethod.POST,
+        ResponseEntity<String> responde = restTemplate.postForEntity(
+                "http://localhost:8080/testpost",
+//                "http://localhost:8080/testpost",
                 entity,
-                String.class).getBody();
+                String.class);
+
+        return token;
+    }
+
+    @PostMapping(value = "/testpost")
+    public @ResponseBody
+    String testpost(@RequestBody String token) {
+        System.out.println("testpost" + token);
+        return token;
     }
 
     @PostMapping(value = "/toBeOrNotToBe")

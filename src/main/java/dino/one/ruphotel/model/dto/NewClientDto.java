@@ -1,6 +1,5 @@
 package dino.one.ruphotel.model.dto;
 
-import dino.one.ruphotel.model.persistance.Room;
 import lombok.Data;
 
 import java.util.ArrayList;
@@ -20,6 +19,6 @@ public class NewClientDto {
     private Date from;
     private Date to;
 
-    private ArrayList<Room> rooms;
+    private ArrayList<Integer> rooms;
 
 }

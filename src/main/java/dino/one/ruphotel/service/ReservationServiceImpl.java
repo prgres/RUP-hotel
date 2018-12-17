@@ -11,6 +11,7 @@ import org.springframework.transaction.annotation.Transactional;
 import javax.persistence.EntityManager;
 import javax.persistence.FlushModeType;
 import javax.persistence.PersistenceContext;
+import java.math.BigDecimal;
 import java.util.Date;
 import java.util.List;
 
@@ -36,7 +37,7 @@ public class ReservationServiceImpl implements ReservationService {
     public Reservation createReservation(Date arrival,
                                          Date departure,
                                          Client client,
-                                         List<Room> roomList) {
+                                         List<Integer> roomList) {
         Reservation reservation = new Reservation();
 
         entityManager.setFlushMode(FlushModeType.COMMIT);
@@ -44,12 +45,14 @@ public class ReservationServiceImpl implements ReservationService {
         reservation.setArrival(arrival);
         reservation.setDeparture(departure);
         reservation.setClient(client);
-//        reservation.getRoomList().addAll(roomList); //TODO: ad
+        reservation.setPriceForAllRooms(new BigDecimal(0));
 
-        reservation.getRoomList().forEach(e -> {
+        roomList.forEach(e -> {
+            Room temporaryRoom = entityManager.getReference(Room.class, new Long(e));
+            reservation.getRoomList().add(temporaryRoom);
             reservation.setPriceForAllRooms(
                     reservation.getPriceForAllRooms().
-                            add(e.getPrice()));
+                            add(temporaryRoom.getPrice()));
         });
 
         entityManager.persist(reservation);
