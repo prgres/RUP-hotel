@@ -23,11 +23,12 @@ import java.util.List;
 public class Room implements Serializable {
 
     @Id
-//    @GeneratedValue
-    @Column(name = "id")
+    @Column(name = "id",
+            nullable = false)
     private Long id;
 
-    @Column(name = "price")
+    @Column(name = "price",
+            nullable = false)
     private BigDecimal price;
 
     @ManyToOne(

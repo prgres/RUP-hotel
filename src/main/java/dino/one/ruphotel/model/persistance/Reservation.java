@@ -26,13 +26,15 @@ public class Reservation {
     private Long id;
 
     @JsonIgnore
-    @Column(name = "arrival")
+    @Column(name = "arrival",
+            nullable = false)
     @Temporal(TemporalType.DATE)
     @DateTimeFormat(pattern = "yyyy-MM-dd")
     private Date arrival;
 
     @JsonIgnore
-    @Column(name = "departure")
+    @Column(name = "departure",
+            nullable = false)
     @Temporal(TemporalType.DATE)
     @DateTimeFormat(pattern = "yyyy-MM-dd")
     private Date departure;

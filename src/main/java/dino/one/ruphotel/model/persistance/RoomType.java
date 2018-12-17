@@ -18,10 +18,12 @@ import java.util.List;
 public class RoomType {
 
     @Id
-    @Column(name = "id")
+    @Column(name = "id",
+            nullable = false)
     private Long id;
 
-    @Column(name = "room_type")
+    @Column(name = "room_type",
+            nullable = false)
     @Size(max = 40)
     private String roomType;
 

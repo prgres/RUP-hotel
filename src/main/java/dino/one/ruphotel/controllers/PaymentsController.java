@@ -1,7 +1,7 @@
 package dino.one.ruphotel.controllers;
 
-import dino.one.ruphotel.model.DeserializedToken;
 import dino.one.ruphotel.model.dto.NewClientDto;
+import dino.one.ruphotel.model.dto.ReservationToRemove;
 import dino.one.ruphotel.model.persistance.Client;
 import dino.one.ruphotel.model.persistance.Reservation;
 import dino.one.ruphotel.service.ClientServiceImpl;
@@ -84,10 +84,7 @@ public class PaymentsController {
     }
 
     @PostMapping(value = "/toBeOrNotToBe")
-    public void toBeOrNotToBe(@RequestBody String token) {
-        DeserializedToken dataToRemove = tokenService.deserializedToken(token);
-
-        clientService.deleteByIdNumber(dataToRemove.getIdentity());
-        reservationService.deleteById(dataToRemove.getId());
+    public void toBeOrNotToBe(@RequestBody ReservationToRemove reservationToRemove) {
+        reservationService.deleteById(reservationToRemove.getId());
     }
 }

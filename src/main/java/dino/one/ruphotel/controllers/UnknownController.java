@@ -2,7 +2,6 @@ package dino.one.ruphotel.controllers;
 
 import org.springframework.boot.web.servlet.error.ErrorController;
 import org.springframework.stereotype.Controller;
-import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 //Redirects to index.html when user goes to the unknown route
@@ -17,23 +16,8 @@ public class UnknownController implements ErrorController {
         return "redirect:/index.html";
     }
 
-//    @RequestMapping(value = "/")
-//    public String index() {
-//        return "redirect:/index.html";
-//    }
-
     @Override
     public String getErrorPath() {
         return "redirect:/index.html";
-    }
-
-//    @GetMapping("/index.html")
-//    public String getIndex() {
-//        return "redirect:/";
-//    }
-
-    @GetMapping("/")
-    public String getIndex() {
-        return "index.html";
     }
 }
