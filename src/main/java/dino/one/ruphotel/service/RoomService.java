@@ -1,7 +1,7 @@
 package dino.one.ruphotel.service;
 
-import dino.one.ruphotel.model.Room;
 import dino.one.ruphotel.model.dto.AvailableRoomsDto;
+import dino.one.ruphotel.model.persistance.Room;
 
 import java.util.List;
 
@@ -11,4 +11,8 @@ import java.util.List;
 
 public interface RoomService {
     List<Room> findAvailableRooms(AvailableRoomsDto availableRoomsDto);
+
+    List<Room> findAvailableRoomsAlternative(AvailableRoomsDto availableRoomsDto);
+
+    List<Room> findAll();
 }

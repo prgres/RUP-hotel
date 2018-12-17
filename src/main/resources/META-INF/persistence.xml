@@ -13,7 +13,7 @@
             <property name="javax.persistence.jdbc.password" value="onenticitionsks"/>
 
             <property name="hibernate.dialect" value="org.hibernate.dialect.PostgreSQL94Dialect"/>
-            <property name="hibernate.hbm2ddl.auto" value="create-drop"/>
+            <property name="hibernate.hbm2ddl.auto" value="update"/>
             <property name="show_sql" value="true"/>
             <property name="hibernate.temp.use_jdbc_metadata_defaults" value="false"/>
         </properties>

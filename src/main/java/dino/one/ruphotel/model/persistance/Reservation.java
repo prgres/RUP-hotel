@@ -1,10 +1,11 @@
-package dino.one.ruphotel.model;
+package dino.one.ruphotel.model.persistance;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import lombok.Data;
 import org.springframework.format.annotation.DateTimeFormat;
 
 import javax.persistence.*;
+import java.math.BigDecimal;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
@@ -53,5 +54,7 @@ public class Reservation {
             inverseJoinColumns = {@JoinColumn(name = "number")})
     private List<Room> roomList = new ArrayList<>();
 
+    @Transient
+    private BigDecimal priceForAllRooms;
 }
 

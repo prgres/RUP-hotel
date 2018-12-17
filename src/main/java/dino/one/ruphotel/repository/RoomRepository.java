@@ -1,6 +1,6 @@
 package dino.one.ruphotel.repository;
 
-import dino.one.ruphotel.model.Room;
+import dino.one.ruphotel.model.persistance.Room;
 import org.springframework.data.repository.CrudRepository;
 import org.springframework.stereotype.Repository;
 

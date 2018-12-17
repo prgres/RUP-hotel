@@ -1,4 +1,4 @@
-package dino.one.ruphotel.model;
+package dino.one.ruphotel.model.persistance;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import lombok.Data;
@@ -16,9 +16,6 @@ import java.util.List;
 @Entity
 @Table(name = "CLIENT")
 public class Client {
-//    @Transient
-//    private AvailableRoomsDto availableRoomsDto;
-
     @JsonIgnore
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)

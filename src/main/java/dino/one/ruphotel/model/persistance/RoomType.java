@@ -1,4 +1,4 @@
-package dino.one.ruphotel.model;
+package dino.one.ruphotel.model.persistance;
 
 import lombok.Data;
 

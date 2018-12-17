@@ -6,10 +6,17 @@ import org.springframework.web.bind.annotation.RequestMapping;
 
 //Redirects to index.html when user goes to the unknown route
 
+//Serve React Frontend on the '/' route
+
 @Controller
 public class UnknownController implements ErrorController {
     @RequestMapping("/error")
     public String error() {
+        return "redirect:/index.html";
+    }
+
+    @RequestMapping(value = "/")
+    public String index() {
         return "redirect:/index.html";
     }
 
