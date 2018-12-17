@@ -3,7 +3,6 @@ package dino.one.ruphotel.model.persistance;
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import lombok.Getter;
 import lombok.Setter;
-import lombok.ToString;
 
 import javax.persistence.*;
 import java.io.Serializable;
@@ -17,7 +16,6 @@ import java.util.List;
 
 @Getter
 @Setter
-@ToString
 @Entity
 @Table(name = "ROOMS")
 public class Room implements Serializable {

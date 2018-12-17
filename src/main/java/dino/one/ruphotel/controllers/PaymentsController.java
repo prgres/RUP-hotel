@@ -8,15 +8,11 @@ import dino.one.ruphotel.service.ClientServiceImpl;
 import dino.one.ruphotel.service.ReservationServiceImpl;
 import dino.one.ruphotel.service.TokenServiceImpl;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.http.HttpEntity;
-import org.springframework.http.HttpHeaders;
-import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.ResponseBody;
-import org.springframework.web.client.RestTemplate;
 
 /**
  * Created by prgres on 2018-12-17.
@@ -29,18 +25,15 @@ public class PaymentsController {
     private final ClientServiceImpl clientService;
     private final TokenServiceImpl tokenService;
     private final ReservationServiceImpl reservationService;
-    private final RestTemplate restTemplate;
 
     @Autowired
     public PaymentsController(
             ClientServiceImpl clientService,
             TokenServiceImpl tokenService,
-            ReservationServiceImpl reservationService,
-            RestTemplate restTemplate) {
+            ReservationServiceImpl reservationService) {
         this.clientService = clientService;
         this.tokenService = tokenService;
         this.reservationService = reservationService;
-        this.restTemplate = restTemplate;
     }
 
     @PostMapping(value = "/generate-token")
@@ -71,15 +64,7 @@ public class PaymentsController {
 
         System.out.println("generete-token " + token);
 
-
-        HttpHeaders headers = new HttpHeaders();
-        headers.setContentType(MediaType.APPLICATION_JSON);
-        HttpEntity<String> entity = new HttpEntity<>(token, headers);
-        ResponseEntity<String> responde = restTemplate.postForEntity(
-                "http://localhost:8080/testpost",
-//                "http://localhost:8080/testpost",
-                entity,
-                String.class);
+        ResponseEntity<String> respondeFromPaymentSite = tokenService.sendTokenToPaymentSite(token);
 
         return token;
     }
@@ -87,7 +72,7 @@ public class PaymentsController {
     @PostMapping(value = "/testpost")
     public @ResponseBody
     String testpost(@RequestBody String token) {
-        System.out.println("testpost" + token);
+        System.out.println("testpost: " + token);
         return token;
     }
 
@@ -95,6 +80,4 @@ public class PaymentsController {
     public void toBeOrNotToBe(@RequestBody ReservationToRemove reservationToRemove) {
         reservationService.deleteById(reservationToRemove.getId());
     }
-
-
 }
