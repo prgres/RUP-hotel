@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="dataSourceStorageLocal">
+    <data-source name="s434805_ino@postgresql.wmi.amu.edu.pl" uuid="2ebb68a9-f284-44f8-8344-9c5ea8611f29">
+      <database-info product="PostgreSQL" version="9.1.24lts2" jdbc-version="4.2" driver-name="PostgreSQL JDBC Driver" driver-version="42.2.2" dbms="POSTGRES" exact-version="9.1.24">
+        <identifier-quote-string>&quot;</identifier-quote-string>
+      </database-info>
+      <case-sensitivity plain-identifiers="lower" quoted-identifiers="exact" />
+      <secret-storage>master_key</secret-storage>
+      <user-name>s434805_ino</user-name>
+      <introspection-schemas>@:@</introspection-schemas>
+      <ssl-config>
+        <enabled>true</enabled>
+      </ssl-config>
+    </data-source>
+  </component>
+</project>

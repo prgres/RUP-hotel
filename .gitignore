@@ -8,6 +8,7 @@
 *.jar
 application.properties
 .properties
+# a
 
 # testing
 /coverage
