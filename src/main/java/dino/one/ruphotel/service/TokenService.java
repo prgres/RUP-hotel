@@ -1,5 +1,7 @@
 package dino.one.ruphotel.service;
 
+import dino.one.ruphotel.model.dto.DataForPaymentService;
+
 import java.math.BigDecimal;
 
 /**
@@ -13,4 +15,5 @@ public interface TokenService {
                          String identity,
                          BigDecimal price);
 
+    void sendDataToPaymentService(DataForPaymentService dataForPaymentService);
 }

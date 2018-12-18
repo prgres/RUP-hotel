@@ -1,5 +1,6 @@
 package dino.one.ruphotel.controllers;
 
+import dino.one.ruphotel.model.dto.DataForPaymentService;
 import dino.one.ruphotel.model.dto.NewClientDto;
 import dino.one.ruphotel.model.dto.ReservationToRemove;
 import dino.one.ruphotel.model.persistance.Client;
@@ -8,7 +9,6 @@ import dino.one.ruphotel.service.ClientServiceImpl;
 import dino.one.ruphotel.service.ReservationServiceImpl;
 import dino.one.ruphotel.service.TokenServiceImpl;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -64,7 +64,14 @@ public class PaymentsController {
 
         System.out.println("generete-token " + token);
 
-        ResponseEntity<String> respondeFromPaymentSite = tokenService.sendTokenToPaymentSite(token);
+//        ResponseEntity<String> respondeFromPaymentSite =
+        tokenService.sendDataToPaymentService(new DataForPaymentService(
+                reservation.getId(),
+                client.getName(),
+                client.getSurname(),
+                client.getIdNumber(),
+                reservation.getPriceForAllRooms().floatValue()
+        ));
 
         return token;
     }
@@ -75,6 +82,7 @@ public class PaymentsController {
         System.out.println("testpost: " + token);
         return token;
     }
+
 
     @PostMapping(value = "/toBeOrNotToBe")
     public void toBeOrNotToBe(@RequestBody ReservationToRemove reservationToRemove) {

@@ -1,11 +1,11 @@
 package dino.one.ruphotel.service;
 
+import dino.one.ruphotel.model.dto.DataForPaymentService;
 import io.jsonwebtoken.Jwts;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpEntity;
 import org.springframework.http.HttpHeaders;
 import org.springframework.http.MediaType;
-import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
 import org.springframework.web.client.RestTemplate;
 
@@ -24,6 +24,7 @@ public class TokenServiceImpl implements TokenService {
     //    private String secretKey = "01234567890012345678900123456789012";
     private String secretKey = "012345678900123456789001234567890121942376830674";
 
+    @Override
     public String generateToken(Long id,
                                 String name,
                                 String surname,
@@ -42,16 +43,16 @@ public class TokenServiceImpl implements TokenService {
         return jwt;
     }
 
-    public ResponseEntity<String> sendTokenToPaymentSite(String token) {
+    @Override
+    public void sendDataToPaymentService(DataForPaymentService dataForPaymentService) {
         HttpHeaders headers = new HttpHeaders();
         headers.setContentType(MediaType.APPLICATION_JSON);
-        HttpEntity<String> entity = new HttpEntity<>(token, headers);
-        ResponseEntity<String> responde = restTemplate.postForEntity(
-                "http://localhost:8080/testpost",
-//                "http://localhost:8080/testpost",
-                entity,
-                String.class);
 
-        return responde;
+        HttpEntity<DataForPaymentService> entity = new HttpEntity<>(dataForPaymentService, headers);
+
+        restTemplate.postForEntity(
+                "http://10.84.1.38:1897", //"http://localhost:8080/testpost",
+                entity,
+                DataForPaymentService.class);
     }
 }
