@@ -18,11 +18,12 @@ import java.math.BigDecimal;
 @Service
 public class TokenServiceImpl implements TokenService {
 
-    @Autowired
-    private RestTemplate restTemplate;
+    private final RestTemplate restTemplate;
 
-    //    private String secretKey = "01234567890012345678900123456789012";
-    private String secretKey = "012345678900123456789001234567890121942376830674";
+    @Autowired
+    public TokenServiceImpl(RestTemplate restTemplate) {
+        this.restTemplate = restTemplate;
+    }
 
     @Override
     public String generateToken(Long id,
@@ -31,6 +32,7 @@ public class TokenServiceImpl implements TokenService {
                                 String identity,
                                 BigDecimal price) {
 
+        String secretKey = "012345678900123456789001234567890121942376830674";
         String jwt = Jwts.builder().
                 claim("id", id).
                 claim("name", name).
@@ -51,7 +53,7 @@ public class TokenServiceImpl implements TokenService {
         HttpEntity<DataForPaymentService> entity = new HttpEntity<>(dataForPaymentService, headers);
 
         restTemplate.postForEntity(
-                "http://10.84.1.38:1897", //"http://localhost:8080/testpost",
+                "http://46.187.239.247:1897",
                 entity,
                 DataForPaymentService.class);
     }

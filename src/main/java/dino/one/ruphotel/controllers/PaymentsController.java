@@ -10,6 +10,7 @@ import dino.one.ruphotel.service.ReservationServiceImpl;
 import dino.one.ruphotel.service.TokenServiceImpl;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.ResponseBody;
@@ -18,7 +19,7 @@ import org.springframework.web.bind.annotation.ResponseBody;
  * Created by prgres on 2018-12-17.
  */
 
-
+@CrossOrigin
 @Controller
 public class PaymentsController {
 
@@ -64,7 +65,6 @@ public class PaymentsController {
 
         System.out.println("generete-token " + token);
 
-//        ResponseEntity<String> respondeFromPaymentSite =
         tokenService.sendDataToPaymentService(new DataForPaymentService(
                 reservation.getId(),
                 client.getName(),
@@ -76,12 +76,12 @@ public class PaymentsController {
         return token;
     }
 
-    @PostMapping(value = "/testpost")
-    public @ResponseBody
-    String testpost(@RequestBody String token) {
-        System.out.println("testpost: " + token);
-        return token;
-    }
+//    @PostMapping(value = "/testpost")
+//    public @ResponseBody
+//    String testpost(@RequestBody String token) {
+//        System.out.println("testpost: " + token);
+//        return token;
+//    }
 
 
     @PostMapping(value = "/toBeOrNotToBe")

@@ -5,10 +5,12 @@ import dino.one.ruphotel.model.persistance.Room;
 import dino.one.ruphotel.service.RoomServiceImpl;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
-import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.CrossOrigin;
+import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.ResponseBody;
 
+@CrossOrigin
 @Controller
 public class RoomsController {
 
@@ -19,20 +21,20 @@ public class RoomsController {
         this.roomService = roomService;
     }
 
-    @GetMapping(value = "/showAll")
-    public @ResponseBody
-    Iterable<Room> showAll() {
-        return roomService.findAll();
-    }
+//    @GetMapping(value = "/showAll")
+//    public @ResponseBody
+//    Iterable<Room> showAll() {
+//        return roomService.findAll();
+//    }
 
-    @GetMapping(value = "/testmethod")
-    public @ResponseBody
-    Iterable<Room> showAll(
-            @RequestBody AvailableRoomsDto availableRoomsDto) {
-        return roomService.findAvailableRoomsAlternative(availableRoomsDto);
-    }
+//    @GetMapping(value = "/testmethod")
+//    public @ResponseBody
+//    Iterable<Room> showAll(
+//            @RequestBody AvailableRoomsDto availableRoomsDto) {
+//        return roomService.findAvailableRoomsAlternative(availableRoomsDto);
+//    }
 
-    @GetMapping(value = "/rooms")
+    @PostMapping(value = "/rooms")
     public @ResponseBody
     Iterable<Room> rooms(@RequestBody AvailableRoomsDto availableRoomsDto) {
         return roomService.findAvailableRooms(availableRoomsDto);
