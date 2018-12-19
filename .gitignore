@@ -6,6 +6,8 @@
 .pnp.js
 /lib
 *.jar
+application.properties
+.properties
 
 # a
 

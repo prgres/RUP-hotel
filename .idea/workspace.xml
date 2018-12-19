@@ -2,40 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="085b2c22-020e-4393-8df7-367eed034f67" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/test/java/dino/one/ruphotel/service/ClientServiceImplTest.groovy" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/dino/one/ruphotel/service/ReservationServiceImplTest.groovy" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/dino/one/ruphotel/service/RoomServiceImplTest.groovy" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/dino/one/ruphotel/service/TokenServiceImplTest.groovy" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/dino/one/ruphotel/controllers/PaymentsController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dino/one/ruphotel/controllers/PaymentsController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/dino/one/ruphotel/controllers/RoomsController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dino/one/ruphotel/controllers/RoomsController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/dino/one/ruphotel/model/dto/DataForPaymentService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dino/one/ruphotel/model/dto/DataForPaymentService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/dino/one/ruphotel/model/persistance/Client.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dino/one/ruphotel/model/persistance/Client.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/dino/one/ruphotel/model/persistance/Room.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dino/one/ruphotel/model/persistance/Room.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/dino/one/ruphotel/service/RoomServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dino/one/ruphotel/service/RoomServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/dino/one/ruphotel/service/TokenServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dino/one/ruphotel/service/TokenServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/dino/one/ruphotel/controllers/DefaultController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/dino/one/ruphotel/controllers/DefaultController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/dino/one/ruphotel/controllers/PaymentsController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/dino/one/ruphotel/controllers/PaymentsController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/dino/one/ruphotel/controllers/RoomsController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/dino/one/ruphotel/controllers/RoomsController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/dino/one/ruphotel/controllers/UnknownController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/dino/one/ruphotel/controllers/UnknownController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/dino/one/ruphotel/model/dto/DataForPaymentService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/dino/one/ruphotel/model/dto/DataForPaymentService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/dino/one/ruphotel/model/persistance/Client.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/dino/one/ruphotel/model/persistance/Client.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/dino/one/ruphotel/model/persistance/Room.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/dino/one/ruphotel/model/persistance/Room.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/dino/one/ruphotel/service/TokenServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/dino/one/ruphotel/service/TokenServiceImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/heroku/app/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/heroku/app/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/heroku/app/target/rup-hotel.war" beforeDir="false" afterPath="$PROJECT_DIR$/target/heroku/app/target/rup-hotel.war" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/heroku/build.tgz" beforeDir="false" afterPath="$PROJECT_DIR$/target/heroku/build.tgz" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/rup-hotel.war" beforeDir="false" afterPath="$PROJECT_DIR$/target/rup-hotel.war" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/rup-hotel.war.original" beforeDir="false" afterPath="$PROJECT_DIR$/target/rup-hotel.war.original" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/rup-hotel/WEB-INF/classes/dino/one/ruphotel/controllers/DefaultController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/rup-hotel/WEB-INF/classes/dino/one/ruphotel/controllers/DefaultController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/rup-hotel/WEB-INF/classes/dino/one/ruphotel/controllers/PaymentsController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/rup-hotel/WEB-INF/classes/dino/one/ruphotel/controllers/PaymentsController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/rup-hotel/WEB-INF/classes/dino/one/ruphotel/controllers/RoomsController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/rup-hotel/WEB-INF/classes/dino/one/ruphotel/controllers/RoomsController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/rup-hotel/WEB-INF/classes/dino/one/ruphotel/controllers/UnknownController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/rup-hotel/WEB-INF/classes/dino/one/ruphotel/controllers/UnknownController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/rup-hotel/WEB-INF/classes/dino/one/ruphotel/model/persistance/Room.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/rup-hotel/WEB-INF/classes/dino/one/ruphotel/model/persistance/Room.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/rup-hotel/WEB-INF/classes/dino/one/ruphotel/service/TokenServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/rup-hotel/WEB-INF/classes/dino/one/ruphotel/service/TokenServiceImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/surefire-reports/TEST-dino.one.ruphotel.RupHotelApplicationTests.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/surefire-reports/TEST-dino.one.ruphotel.RupHotelApplicationTests.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/surefire-reports/dino.one.ruphotel.RupHotelApplicationTests.txt" beforeDir="false" afterPath="$PROJECT_DIR$/target/surefire-reports/dino.one.ruphotel.RupHotelApplicationTests.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -108,8 +75,8 @@
           <file pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/src/main/java/dino/one/ruphotel/service/ReservationServiceImpl.java">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="153">
-                  <caret line="23" column="28" lean-forward="true" selection-start-line="23" selection-start-column="28" selection-end-line="23" selection-end-column="28" />
+                <state relative-caret-position="296">
+                  <caret line="53" column="54" lean-forward="true" selection-start-line="53" selection-start-column="54" selection-end-line="53" selection-end-column="54" />
                   <folding>
                     <element signature="imports" expanded="true" />
                   </folding>
@@ -148,11 +115,29 @@
               </provider>
             </entry>
           </file>
-          <file pinned="false" current-in-tab="true">
+          <file pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/src/main/resources/application.properties">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="45">
+                  <caret line="3" column="17" selection-start-line="3" selection-start-column="17" selection-end-line="3" selection-end-column="17" />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/src/test/java/dino/one/ruphotel/service/RoomServiceImplTest.groovy">
               <provider selected="true" editor-type-id="text-editor">
                 <state relative-caret-position="210">
                   <caret line="14" column="4" selection-start-line="14" selection-start-column="4" selection-end-line="14" selection-end-column="4" />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/.gitignore">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="270">
+                  <caret line="18" lean-forward="true" selection-start-line="18" selection-end-line="18" />
                 </state>
               </provider>
             </entry>
@@ -235,7 +220,6 @@
         <option value="$PROJECT_DIR$/src/main/java/dino/one/ruphotel/controllers/ssh/SSHConnection.java" />
         <option value="$PROJECT_DIR$/src/main/java/dino/one/ruphotel/RupHotelApplication.java" />
         <option value="$PROJECT_DIR$/src/main/java/dino/one/ruphotel/service/TokenService.java" />
-        <option value="$PROJECT_DIR$/.gitignore" />
         <option value="$PROJECT_DIR$/src/main/java/dino/one/ruphotel/controllers/DefaultController.java" />
         <option value="$PROJECT_DIR$/src/main/java/dino/one/ruphotel/model/persistance/Room.java" />
         <option value="$PROJECT_DIR$/src/main/java/dino/one/ruphotel/controllers/RoomsController.java" />
@@ -252,6 +236,7 @@
         <option value="$PROJECT_DIR$/src/test/java/dino/one/ruphotel/service/RoomServiceImplTest.groovy" />
         <option value="$PROJECT_DIR$/src/main/java/dino/one/ruphotel/service/RoomServiceImpl.java" />
         <option value="$PROJECT_DIR$/src/test/java/dino/one/ruphotel/service/ReservationServiceImplTest.groovy" />
+        <option value="$PROJECT_DIR$/.gitignore" />
       </list>
     </option>
   </component>
@@ -500,7 +485,7 @@
       <option name="presentableId" value="Default" />
       <updated>1544481099394</updated>
       <workItem from="1544481100985" duration="103442000" />
-      <workItem from="1545172524510" duration="9908000" />
+      <workItem from="1545172524510" duration="10151000" />
     </task>
     <task id="LOCAL-00001" summary="add models and basic mapping">
       <created>1544483226943</created>
@@ -656,16 +641,31 @@
       <option name="project" value="LOCAL" />
       <updated>1545190623094</updated>
     </task>
-    <option name="localTasksCounter" value="23" />
+    <task id="LOCAL-00023" summary="added test class">
+      <created>1545191013892</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1545191013892</updated>
+    </task>
+    <task id="LOCAL-00024" summary="added test class">
+      <created>1545191030798</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1545191030798</updated>
+    </task>
+    <option name="localTasksCounter" value="25" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="113350000" />
+    <option name="totallyTimeSpent" value="113593000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1680" height="1027" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49489796" weight="0.23748474" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49489796" visible="true" weight="0.23748474" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="Persistence" order="3" sideWeight="0.50510204" side_tool="true" weight="0.26007327" />
@@ -986,13 +986,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/.gitignore">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="405">
-          <caret line="27" column="15" selection-start-line="27" selection-start-column="15" selection-end-line="27" selection-end-column="15" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/dino/one/ruphotel/model/dto/NewClientDto.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="285">
@@ -1010,13 +1003,6 @@
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/application.properties">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="45">
-          <caret line="3" column="17" lean-forward="true" selection-start-line="3" selection-start-column="17" selection-end-line="3" selection-end-column="17" />
         </state>
       </provider>
     </entry>
@@ -1189,20 +1175,34 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/dino/one/ruphotel/service/RoomServiceImplTest.groovy">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="210">
+          <caret line="14" column="4" selection-start-line="14" selection-start-column="4" selection-end-line="14" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/application.properties">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="45">
+          <caret line="3" column="17" selection-start-line="3" selection-start-column="17" selection-end-line="3" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/dino/one/ruphotel/service/ReservationServiceImpl.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="23" column="28" lean-forward="true" selection-start-line="23" selection-start-column="28" selection-end-line="23" selection-end-column="28" />
+        <state relative-caret-position="296">
+          <caret line="53" column="54" lean-forward="true" selection-start-line="53" selection-start-column="54" selection-end-line="53" selection-end-column="54" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/dino/one/ruphotel/service/RoomServiceImplTest.groovy">
+    <entry file="file://$PROJECT_DIR$/.gitignore">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="14" column="4" selection-start-line="14" selection-start-column="4" selection-end-line="14" selection-end-column="4" />
+        <state relative-caret-position="270">
+          <caret line="18" lean-forward="true" selection-start-line="18" selection-end-line="18" />
         </state>
       </provider>
     </entry>
