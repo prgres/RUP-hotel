@@ -39,17 +39,25 @@ public class RoomServiceImpl implements RoomService {
         List<Room> allRooms = roomRepository.findAll();
         System.out.println(allRooms);
 
+        /* 1 - 1
+         *  2 - 2 1
+         *  3 - 3 2 1
+         * */
+
         List<Room> avaible = new ArrayList<>();
+
         allRooms.forEach(e -> {
-            if (e.getRoomType().getId() >= availableRoomsDto.getPersonCount()) {
+            if (availableRoomsDto.getPersonCount() >= e.getRoomType().getId()) {
+
                 if (e.getReservation().isEmpty()) {
                     avaible.add(e);
                 } else {
                     e.getReservation().forEach(f -> {
-                        if (((availableRoomsDto.getTo().before(f.getArrival()))
-                                || (availableRoomsDto.getFrom().after(f.getDeparture())))) {
-                            avaible.add(e);
-                            System.out.println(e);
+
+                        if (((availableRoomsDto.getTo().before(f.getArrival())) || (availableRoomsDto.getFrom().after(f.getDeparture())))) {
+                            if (!avaible.contains(e)) {
+                                avaible.add(e);
+                            }
                         }
                     });
                 }
@@ -58,6 +66,7 @@ public class RoomServiceImpl implements RoomService {
 
         return avaible;
     }
+
 
     @Override
     public List<Room> findAvailableRooms(AvailableRoomsDto availableRoomsDto) {

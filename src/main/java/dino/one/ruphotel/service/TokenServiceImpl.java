@@ -2,6 +2,7 @@ package dino.one.ruphotel.service;
 
 import dino.one.ruphotel.model.dto.DataForPaymentService;
 import io.jsonwebtoken.Jwts;
+import io.jsonwebtoken.security.Keys;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpEntity;
 import org.springframework.http.HttpHeaders;
@@ -10,6 +11,7 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
 import org.springframework.web.client.RestTemplate;
 
+import javax.crypto.SecretKey;
 import java.math.BigDecimal;
 import java.util.HashMap;
 import java.util.LinkedHashMap;
@@ -35,15 +37,18 @@ public class TokenServiceImpl implements TokenService {
                                 String identity,
                                 BigDecimal price) {
 
-        String secretKey = "012345678900123456789001234567890121942376830674";
+        String secretKey = "0123456789012345678901234567891201234567890123456789012345678912";
+
+        SecretKey key = Keys.hmacShaKeyFor(secretKey.getBytes());
         String jwt = Jwts.builder().
+                signWith(io.jsonwebtoken.SignatureAlgorithm.HS256, key).
+                setHeaderParam("typ", "JWT").
                 claim("id", id).
                 claim("name", name).
                 claim("surname", surname).
                 claim("identityID", identity).
-                claim("price", price).
+                claim("price", price.floatValue()).
                 claim("exp", System.currentTimeMillis() / 1000 + 3600).
-                signWith(io.jsonwebtoken.SignatureAlgorithm.HS256, secretKey).
                 compact();
         return jwt;
     }
@@ -60,12 +65,10 @@ public class TokenServiceImpl implements TokenService {
         hashMap.put("identityID", dataForPaymentService.getIdentityID());
         hashMap.put("price", dataForPaymentService.getPrice());
 
-//        HttpEntity<DataForPaymentService> entity = new HttpEntity<>(dataForPaymentService, headers);
         HttpEntity<HashMap<String, Object>> entity = new HttpEntity<>(hashMap, headers);
 
-//TODO: secend version to send json to c# server
         ResponseEntity<Void> responseEntity = restTemplate.postForEntity(
-                "http://46.187.239.247:1897",
+                "http://46.187.239.247:1897/api/pay",
                 entity,
                 Void.class);
     }

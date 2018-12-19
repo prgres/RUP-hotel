@@ -12,8 +12,9 @@ import javax.persistence.EntityManager;
 import javax.persistence.FlushModeType;
 import javax.persistence.PersistenceContext;
 import java.math.BigDecimal;
+import java.time.Instant;
 import java.time.LocalDate;
-import java.time.format.DateTimeFormatter;
+import java.time.ZoneId;
 import java.time.temporal.ChronoUnit;
 import java.util.Date;
 import java.util.List;
@@ -26,14 +27,18 @@ import java.util.List;
 @Transactional
 public class ReservationServiceImpl implements ReservationService {
 
-    private final
-    ReservationRepository reservationRepository;
+    private final ReservationRepository reservationRepository;
+
     @PersistenceContext
     EntityManager entityManager;
 
     @Autowired
     public ReservationServiceImpl(ReservationRepository reservationRepository) {
         this.reservationRepository = reservationRepository;
+    }
+
+    public static LocalDate getLocalDateFromDate(Date date) {
+        return LocalDate.from(Instant.ofEpochMilli(date.getTime()).atZone(ZoneId.systemDefault()));
     }
 
     @Override
@@ -50,11 +55,7 @@ public class ReservationServiceImpl implements ReservationService {
         reservation.setClient(client);
         reservation.setPriceForAllRooms(new BigDecimal(0));
 
-        DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd MM yyyy");
-
-        LocalDate firstDate = LocalDate.parse(arrival.toString(), formatter);
-        LocalDate secondDate = LocalDate.parse(departure.toString(), formatter);
-        long days = ChronoUnit.DAYS.between(firstDate, secondDate);
+        long days = ChronoUnit.DAYS.between(getLocalDateFromDate(arrival), getLocalDateFromDate(departure));
 
         roomList.forEach(e -> {
             Room temporaryRoom = entityManager.getReference(Room.class, new Long(e));

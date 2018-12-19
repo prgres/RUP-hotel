@@ -41,7 +41,6 @@ public class PaymentsController {
     @PostMapping(value = "/generate-token")
     public @ResponseBody
     HashMap<String, Object> generateToken(
-//    String generateToken(
             @RequestBody NewClientDto newClientDto) {
 
         Client client = clientService.checkIfUserExist(newClientDto.getName(),
