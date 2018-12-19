@@ -11,6 +11,8 @@ import org.springframework.stereotype.Service;
 import org.springframework.web.client.RestTemplate;
 
 import java.math.BigDecimal;
+import java.util.HashMap;
+import java.util.LinkedHashMap;
 
 /**
  * Created by prgres on 2018-12-12.
@@ -51,8 +53,17 @@ public class TokenServiceImpl implements TokenService {
         HttpHeaders headers = new HttpHeaders();
         headers.setContentType(MediaType.APPLICATION_JSON);
 
-        HttpEntity<DataForPaymentService> entity = new HttpEntity<>(dataForPaymentService, headers);
+        HashMap<String, Object> hashMap = new LinkedHashMap<>();
+        hashMap.put("id", dataForPaymentService.getId());
+        hashMap.put("name", dataForPaymentService.getName());
+        hashMap.put("surname", dataForPaymentService.getSurname());
+        hashMap.put("identityID", dataForPaymentService.getIdentityID());
+        hashMap.put("price", dataForPaymentService.getPrice());
 
+//        HttpEntity<DataForPaymentService> entity = new HttpEntity<>(dataForPaymentService, headers);
+        HttpEntity<HashMap<String, Object>> entity = new HttpEntity<>(hashMap, headers);
+
+//TODO: secend version to send json to c# server
         ResponseEntity<Void> responseEntity = restTemplate.postForEntity(
                 "http://46.187.239.247:1897",
                 entity,
