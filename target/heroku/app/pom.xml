@@ -12,7 +12,7 @@
 	<artifactId>rup-hotel</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<packaging>war</packaging>
-	<name>rup-hotel</name>
+	<name>rup-hotel1</name>
     <description>DINO Project</description>
 
 	<properties>

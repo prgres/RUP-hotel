@@ -2,7 +2,6 @@ package dino.one.ruphotel.service;
 
 import dino.one.ruphotel.model.dto.AvailableRoomsDto;
 import dino.one.ruphotel.model.persistance.Room;
-import dino.one.ruphotel.model.persistance.RoomType;
 import dino.one.ruphotel.repository.RoomRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -10,7 +9,6 @@ import org.springframework.transaction.annotation.Transactional;
 
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
-import java.math.BigDecimal;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -79,16 +77,5 @@ public class RoomServiceImpl implements RoomService {
 
         return listToReturn;
 
-    }
-
-    public Room testmethod() {
-        Room temp = new Room();
-
-        temp.setId(6L);
-        temp.setPrice(BigDecimal.valueOf(1243124));
-        temp.setRoomType(entityManager.getReference(RoomType.class, 2L));
-
-        roomRepository.save(temp);
-        return temp;
     }
 }

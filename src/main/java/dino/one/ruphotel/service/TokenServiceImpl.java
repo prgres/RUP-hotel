@@ -6,6 +6,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpEntity;
 import org.springframework.http.HttpHeaders;
 import org.springframework.http.MediaType;
+import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
 import org.springframework.web.client.RestTemplate;
 
@@ -52,9 +53,9 @@ public class TokenServiceImpl implements TokenService {
 
         HttpEntity<DataForPaymentService> entity = new HttpEntity<>(dataForPaymentService, headers);
 
-        restTemplate.postForEntity(
+        ResponseEntity<Void> responseEntity = restTemplate.postForEntity(
                 "http://46.187.239.247:1897",
                 entity,
-                DataForPaymentService.class);
+                Void.class);
     }
 }

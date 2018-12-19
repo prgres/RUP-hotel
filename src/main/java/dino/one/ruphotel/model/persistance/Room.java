@@ -1,6 +1,7 @@
 package dino.one.ruphotel.model.persistance;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import lombok.Getter;
 import lombok.Setter;
 
@@ -18,6 +19,7 @@ import java.util.List;
 @Setter
 @Entity
 @Table(name = "ROOMS")
+@JsonIgnoreProperties({"hibernateLazyInitializer", "handler"})
 public class Room implements Serializable {
 
     @Id

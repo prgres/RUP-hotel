@@ -10,10 +10,7 @@ import dino.one.ruphotel.service.ReservationServiceImpl;
 import dino.one.ruphotel.service.TokenServiceImpl;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
-import org.springframework.web.bind.annotation.CrossOrigin;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.ResponseBody;
+import org.springframework.web.bind.annotation.*;
 
 /**
  * Created by prgres on 2018-12-17.
@@ -21,6 +18,7 @@ import org.springframework.web.bind.annotation.ResponseBody;
 
 @CrossOrigin
 @Controller
+@RequestMapping(value = "/api")
 public class PaymentsController {
 
     private final ClientServiceImpl clientService;

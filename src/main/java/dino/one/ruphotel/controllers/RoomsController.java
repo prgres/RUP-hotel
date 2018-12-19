@@ -5,13 +5,11 @@ import dino.one.ruphotel.model.persistance.Room;
 import dino.one.ruphotel.service.RoomServiceImpl;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
-import org.springframework.web.bind.annotation.CrossOrigin;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.ResponseBody;
+import org.springframework.web.bind.annotation.*;
 
 @CrossOrigin
 @Controller
+@RequestMapping(value = "/api")
 public class RoomsController {
 
     private final RoomServiceImpl roomService;
@@ -31,7 +29,7 @@ public class RoomsController {
 //    public @ResponseBody
 //    Iterable<Room> showAll(
 //            @RequestBody AvailableRoomsDto availableRoomsDto) {
-//        return roomService.findAvailableRoomsAlternative(availableRoomsDto);
+//        return roomService .findAvailableRoomsAlternative(availableRoomsDto);
 //    }
 
     @PostMapping(value = "/rooms")
