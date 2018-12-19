@@ -12,6 +12,9 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.HashMap;
+import java.util.LinkedHashMap;
+
 /**
  * Created by prgres on 2018-12-17.
  */
@@ -37,7 +40,8 @@ public class PaymentsController {
 
     @PostMapping(value = "/generate-token")
     public @ResponseBody
-    String generateToken(
+    HashMap<String, Object> generateToken(
+//    String generateToken(
             @RequestBody NewClientDto newClientDto) {
 
         Client client = clientService.checkIfUserExist(newClientDto.getName(),
@@ -71,15 +75,12 @@ public class PaymentsController {
                 reservation.getPriceForAllRooms().floatValue()
         ));
 
-        return token;
-    }
+        HashMap<String, Object> rtn = new LinkedHashMap<String, Object>();
+        rtn.put("token", token);
+        rtn.put("id", reservation.getId());
 
-//    @PostMapping(value = "/testpost")
-//    public @ResponseBody
-//    String testpost(@RequestBody String token) {
-//        System.out.println("testpost: " + token);
-//        return token;
-//    }
+        return rtn;
+    }
 
 
     @PostMapping(value = "/toBeOrNotToBe")

@@ -32,9 +32,9 @@ public class Client {
     private String surname;
 
     @Column(name = "id_number",
-            length = 11,
+            length = 9,
             nullable = false)
-    @Size(max = 11)
+    @Size(max = 9)
     private String idNumber;
 
     @OneToMany(

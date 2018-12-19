@@ -19,19 +19,6 @@ public class RoomsController {
         this.roomService = roomService;
     }
 
-//    @GetMapping(value = "/showAll")
-//    public @ResponseBody
-//    Iterable<Room> showAll() {
-//        return roomService.findAll();
-//    }
-
-//    @GetMapping(value = "/testmethod")
-//    public @ResponseBody
-//    Iterable<Room> showAll(
-//            @RequestBody AvailableRoomsDto availableRoomsDto) {
-//        return roomService .findAvailableRoomsAlternative(availableRoomsDto);
-//    }
-
     @PostMapping(value = "/rooms")
     public @ResponseBody
     Iterable<Room> rooms(@RequestBody AvailableRoomsDto availableRoomsDto) {
