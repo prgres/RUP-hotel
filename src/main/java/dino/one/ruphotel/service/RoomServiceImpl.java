@@ -7,8 +7,6 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
-import javax.persistence.EntityManager;
-import javax.persistence.PersistenceContext;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -20,9 +18,6 @@ import java.util.List;
 @Transactional
 public class RoomServiceImpl implements RoomService {
     private final RoomRepository roomRepository;
-
-    @PersistenceContext
-    EntityManager entityManager;
 
     @Autowired
     public RoomServiceImpl(RoomRepository roomRepository) {
@@ -38,11 +33,6 @@ public class RoomServiceImpl implements RoomService {
     public List<Room> findAvailableRoomsAlternative(AvailableRoomsDto availableRoomsDto) {
         List<Room> allRooms = roomRepository.findAll();
         System.out.println(allRooms);
-
-        /* 1 - 1
-         *  2 - 2 1
-         *  3 - 3 2 1
-         * */
 
         List<Room> avaible = new ArrayList<>();
 
