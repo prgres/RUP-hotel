@@ -2,7 +2,22 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="085b2c22-020e-4393-8df7-367eed034f67" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Procfile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/dino/one/ruphotel/model/dto/DataForPaymentService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/dino/one/ruphotel/model/dto/DataForPaymentService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/dino/one/ruphotel/service/RoomServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/dino/one/ruphotel/service/RoomServiceImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/maven-archiver/pom.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-archiver/pom.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/rup-hotel.war" beforeDir="false" afterPath="$PROJECT_DIR$/target/rup-hotel.war" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/rup-hotel.war.original" beforeDir="false" afterPath="$PROJECT_DIR$/target/rup-hotel.war.original" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/rup-hotel/WEB-INF/classes/dino/one/ruphotel/controllers/PaymentsController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/rup-hotel/WEB-INF/classes/dino/one/ruphotel/controllers/PaymentsController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/rup-hotel/WEB-INF/classes/dino/one/ruphotel/controllers/RoomsController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/rup-hotel/WEB-INF/classes/dino/one/ruphotel/controllers/RoomsController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/rup-hotel/WEB-INF/classes/dino/one/ruphotel/controllers/UnknownController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/rup-hotel/WEB-INF/classes/dino/one/ruphotel/controllers/UnknownController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/rup-hotel/WEB-INF/classes/dino/one/ruphotel/model/dto/DataForPaymentService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/rup-hotel/WEB-INF/classes/dino/one/ruphotel/model/dto/DataForPaymentService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/rup-hotel/WEB-INF/classes/dino/one/ruphotel/model/persistance/Client.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/rup-hotel/WEB-INF/classes/dino/one/ruphotel/model/persistance/Client.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/rup-hotel/WEB-INF/classes/dino/one/ruphotel/service/RoomServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/rup-hotel/WEB-INF/classes/dino/one/ruphotel/service/RoomServiceImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/rup-hotel/WEB-INF/classes/dino/one/ruphotel/service/TokenServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/rup-hotel/WEB-INF/classes/dino/one/ruphotel/service/TokenServiceImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/surefire-reports/TEST-dino.one.ruphotel.RupHotelApplicationTests.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/surefire-reports/TEST-dino.one.ruphotel.RupHotelApplicationTests.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/surefire-reports/dino.one.ruphotel.RupHotelApplicationTests.txt" beforeDir="false" afterPath="$PROJECT_DIR$/target/surefire-reports/dino.one.ruphotel.RupHotelApplicationTests.txt" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -72,14 +87,23 @@
               </provider>
             </entry>
           </file>
-          <file pinned="false" current-in-tab="true">
+          <file pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/src/main/java/dino/one/ruphotel/service/ReservationServiceImpl.java">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="296">
-                  <caret line="53" column="54" lean-forward="true" selection-start-line="53" selection-start-column="54" selection-end-line="53" selection-end-column="54" />
+                <state relative-caret-position="157">
+                  <caret line="48" lean-forward="true" selection-start-line="48" selection-end-line="48" />
                   <folding>
                     <element signature="imports" expanded="true" />
                   </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/pom.xml">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="165">
+                  <caret line="11" column="25" selection-start-line="11" selection-start-column="16" selection-end-line="11" selection-end-column="25" />
                 </state>
               </provider>
             </entry>
@@ -133,11 +157,20 @@
               </provider>
             </entry>
           </file>
-          <file pinned="false" current-in-tab="true">
+          <file pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/.gitignore">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="270">
-                  <caret line="18" lean-forward="true" selection-start-line="18" selection-end-line="18" />
+                <state>
+                  <caret column="43" selection-start-column="43" selection-end-column="43" />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/src/Procfile">
+              <provider selected="true" editor-type-id="text-editor">
+                <state>
+                  <caret column="55" selection-start-column="55" selection-end-column="55" />
                 </state>
               </provider>
             </entry>
@@ -186,7 +219,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/main/resources/META-INF/persistence.ml" />
         <option value="$PROJECT_DIR$/src/main/java/dino/one/ruphotel/model/NewClientRequest.java" />
         <option value="$PROJECT_DIR$/src/main/java/dino/one/ruphotel/model/AvailableRoomsRequest.java" />
         <option value="$PROJECT_DIR$/src/main/java/dino/one/ruphotel/model/AvailableRoomsDto.java" />
@@ -237,6 +269,7 @@
         <option value="$PROJECT_DIR$/src/main/java/dino/one/ruphotel/service/RoomServiceImpl.java" />
         <option value="$PROJECT_DIR$/src/test/java/dino/one/ruphotel/service/ReservationServiceImplTest.groovy" />
         <option value="$PROJECT_DIR$/.gitignore" />
+        <option value="$PROJECT_DIR$/src/Procfile" />
       </list>
     </option>
   </component>
@@ -290,101 +323,6 @@
               <item name="rup-hotel" type="b2602c69:ProjectViewProjectNode" />
               <item name="RUP-hotel" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="rup-hotel" type="b2602c69:ProjectViewProjectNode" />
-              <item name="RUP-hotel" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="rup-hotel" type="b2602c69:ProjectViewProjectNode" />
-              <item name="RUP-hotel" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="rup-hotel" type="b2602c69:ProjectViewProjectNode" />
-              <item name="RUP-hotel" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="ruphotel" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="rup-hotel" type="b2602c69:ProjectViewProjectNode" />
-              <item name="RUP-hotel" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="ruphotel" type="462c0819:PsiDirectoryNode" />
-              <item name="controllers" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="rup-hotel" type="b2602c69:ProjectViewProjectNode" />
-              <item name="RUP-hotel" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="ruphotel" type="462c0819:PsiDirectoryNode" />
-              <item name="model" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="rup-hotel" type="b2602c69:ProjectViewProjectNode" />
-              <item name="RUP-hotel" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="ruphotel" type="462c0819:PsiDirectoryNode" />
-              <item name="model" type="462c0819:PsiDirectoryNode" />
-              <item name="dto" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="rup-hotel" type="b2602c69:ProjectViewProjectNode" />
-              <item name="RUP-hotel" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="ruphotel" type="462c0819:PsiDirectoryNode" />
-              <item name="service" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="rup-hotel" type="b2602c69:ProjectViewProjectNode" />
-              <item name="RUP-hotel" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="rup-hotel" type="b2602c69:ProjectViewProjectNode" />
-              <item name="RUP-hotel" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="test" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="rup-hotel" type="b2602c69:ProjectViewProjectNode" />
-              <item name="RUP-hotel" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="test" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="rup-hotel" type="b2602c69:ProjectViewProjectNode" />
-              <item name="RUP-hotel" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="test" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="ruphotel" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="rup-hotel" type="b2602c69:ProjectViewProjectNode" />
-              <item name="RUP-hotel" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="test" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="ruphotel" type="462c0819:PsiDirectoryNode" />
-              <item name="service" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -485,7 +423,7 @@
       <option name="presentableId" value="Default" />
       <updated>1544481099394</updated>
       <workItem from="1544481100985" duration="103442000" />
-      <workItem from="1545172524510" duration="10151000" />
+      <workItem from="1545172524510" duration="10569000" />
     </task>
     <task id="LOCAL-00001" summary="add models and basic mapping">
       <created>1544483226943</created>
@@ -655,17 +593,24 @@
       <option name="project" value="LOCAL" />
       <updated>1545191030798</updated>
     </task>
-    <option name="localTasksCounter" value="25" />
+    <task id="LOCAL-00025" summary="added test class">
+      <created>1545191079526</created>
+      <option name="number" value="00025" />
+      <option name="presentableId" value="LOCAL-00025" />
+      <option name="project" value="LOCAL" />
+      <updated>1545191079526</updated>
+    </task>
+    <option name="localTasksCounter" value="26" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="113593000" />
+    <option name="totallyTimeSpent" value="114011000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1680" height="1027" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49489796" visible="true" weight="0.23748474" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49489796" visible="true" weight="0.23748474" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="Persistence" order="3" sideWeight="0.50510204" side_tool="true" weight="0.26007327" />
@@ -674,12 +619,12 @@
       <window_info id="Web" order="6" side_tool="true" weight="0.32967034" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32959184" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.4993895" weight="0.39679146" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.4993895" visible="true" weight="0.39679146" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.2857143" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="7" visible="true" weight="0.48770052" />
+      <window_info anchor="bottom" id="Terminal" order="7" weight="0.48770052" />
       <window_info anchor="bottom" id="Docker" order="8" show_stripe_button="false" />
       <window_info anchor="bottom" id="Event Log" order="9" sideWeight="0.50061053" side_tool="true" weight="0.39693877" />
       <window_info anchor="bottom" id="Messages" order="10" weight="0.32834226" />
@@ -812,13 +757,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="jar://$MAVEN_REPOSITORY$/org/postgresql/postgresql/42.2.5/postgresql-42.2.5-sources.jar!/org/postgresql/core/v3/QueryExecutorImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="15">
-          <caret line="2439" selection-start-line="2439" selection-end-line="2439" />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_131.jdk/Contents/Home/src.zip!/java/net/PlainSocketImpl.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="588">
@@ -1124,13 +1062,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="487">
-          <caret line="129" column="21" selection-start-line="129" selection-start-column="21" selection-end-line="129" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/dino/one/ruphotel/service/TokenServiceImpl.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="285">
@@ -1189,20 +1120,34 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="43" selection-start-column="43" selection-end-column="43" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/dino/one/ruphotel/service/ReservationServiceImpl.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="296">
-          <caret line="53" column="54" lean-forward="true" selection-start-line="53" selection-start-column="54" selection-end-line="53" selection-end-column="54" />
+        <state relative-caret-position="157">
+          <caret line="48" lean-forward="true" selection-start-line="48" selection-end-line="48" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/.gitignore">
+    <entry file="file://$PROJECT_DIR$/pom.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="18" lean-forward="true" selection-start-line="18" selection-end-line="18" />
+        <state relative-caret-position="165">
+          <caret line="11" column="25" selection-start-line="11" selection-start-column="16" selection-end-line="11" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Procfile">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="55" selection-start-column="55" selection-end-column="55" />
         </state>
       </provider>
     </entry>
