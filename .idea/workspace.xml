@@ -1,24 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="085b2c22-020e-4393-8df7-367eed034f67" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/Procfile" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/dino/one/ruphotel/model/dto/DataForPaymentService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/dino/one/ruphotel/model/dto/DataForPaymentService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/dino/one/ruphotel/service/RoomServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/dino/one/ruphotel/service/RoomServiceImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/maven-archiver/pom.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-archiver/pom.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/rup-hotel.war" beforeDir="false" afterPath="$PROJECT_DIR$/target/rup-hotel.war" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/rup-hotel.war.original" beforeDir="false" afterPath="$PROJECT_DIR$/target/rup-hotel.war.original" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/rup-hotel/WEB-INF/classes/dino/one/ruphotel/controllers/PaymentsController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/rup-hotel/WEB-INF/classes/dino/one/ruphotel/controllers/PaymentsController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/rup-hotel/WEB-INF/classes/dino/one/ruphotel/controllers/RoomsController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/rup-hotel/WEB-INF/classes/dino/one/ruphotel/controllers/RoomsController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/rup-hotel/WEB-INF/classes/dino/one/ruphotel/controllers/UnknownController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/rup-hotel/WEB-INF/classes/dino/one/ruphotel/controllers/UnknownController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/rup-hotel/WEB-INF/classes/dino/one/ruphotel/model/dto/DataForPaymentService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/rup-hotel/WEB-INF/classes/dino/one/ruphotel/model/dto/DataForPaymentService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/rup-hotel/WEB-INF/classes/dino/one/ruphotel/model/persistance/Client.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/rup-hotel/WEB-INF/classes/dino/one/ruphotel/model/persistance/Client.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/rup-hotel/WEB-INF/classes/dino/one/ruphotel/service/RoomServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/rup-hotel/WEB-INF/classes/dino/one/ruphotel/service/RoomServiceImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/rup-hotel/WEB-INF/classes/dino/one/ruphotel/service/TokenServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/rup-hotel/WEB-INF/classes/dino/one/ruphotel/service/TokenServiceImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/surefire-reports/TEST-dino.one.ruphotel.RupHotelApplicationTests.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/surefire-reports/TEST-dino.one.ruphotel.RupHotelApplicationTests.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/surefire-reports/dino.one.ruphotel.RupHotelApplicationTests.txt" beforeDir="false" afterPath="$PROJECT_DIR$/target/surefire-reports/dino.one.ruphotel.RupHotelApplicationTests.txt" afterDir="false" />
-    </list>
+    <list default="true" id="085b2c22-020e-4393-8df7-367eed034f67" name="Default Changelist" comment="" />
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -102,8 +85,8 @@
           <file pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/pom.xml">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="165">
-                  <caret line="11" column="25" selection-start-line="11" selection-start-column="16" selection-end-line="11" selection-end-column="25" />
+                <state relative-caret-position="60">
+                  <caret line="4" column="12" lean-forward="true" selection-start-line="4" selection-start-column="12" selection-end-line="4" selection-end-column="12" />
                 </state>
               </provider>
             </entry>
@@ -167,7 +150,7 @@
             </entry>
           </file>
           <file pinned="false" current-in-tab="true">
-            <entry file="file://$PROJECT_DIR$/src/Procfile">
+            <entry file="file://$PROJECT_DIR$/Procfile">
               <provider selected="true" editor-type-id="text-editor">
                 <state>
                   <caret column="55" selection-start-column="55" selection-end-column="55" />
@@ -355,6 +338,9 @@
     <key name="CreateTestDialog.Recents.Supers">
       <recent name="spock.lang.Specification" />
     </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$" />
+    </key>
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -423,7 +409,7 @@
       <option name="presentableId" value="Default" />
       <updated>1544481099394</updated>
       <workItem from="1544481100985" duration="103442000" />
-      <workItem from="1545172524510" duration="10569000" />
+      <workItem from="1545172524510" duration="10860000" />
     </task>
     <task id="LOCAL-00001" summary="add models and basic mapping">
       <created>1544483226943</created>
@@ -600,17 +586,30 @@
       <option name="project" value="LOCAL" />
       <updated>1545191079526</updated>
     </task>
-    <option name="localTasksCounter" value="26" />
+    <task id="LOCAL-00026" summary="added test class">
+      <created>1545191515924</created>
+      <option name="number" value="00026" />
+      <option name="presentableId" value="LOCAL-00026" />
+      <option name="project" value="LOCAL" />
+      <updated>1545191515924</updated>
+    </task>
+    <task id="LOCAL-00027" summary="added test class">
+      <created>1545191568489</created>
+      <option name="number" value="00027" />
+      <option name="presentableId" value="LOCAL-00027" />
+      <option name="project" value="LOCAL" />
+      <updated>1545191568490</updated>
+    </task>
+    <option name="localTasksCounter" value="28" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="114011000" />
+    <option name="totallyTimeSpent" value="114302000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1680" height="1027" extended-state="6" />
-    <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49489796" visible="true" weight="0.23748474" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49489796" visible="true" weight="0.23748474" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="Persistence" order="3" sideWeight="0.50510204" side_tool="true" weight="0.26007327" />
@@ -619,12 +618,12 @@
       <window_info id="Web" order="6" side_tool="true" weight="0.32967034" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32959184" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.4993895" visible="true" weight="0.39679146" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.4993895" weight="0.39679146" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.2857143" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="bottom" id="Terminal" order="7" weight="0.48770052" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="7" visible="true" weight="0.48770052" />
       <window_info anchor="bottom" id="Docker" order="8" show_stripe_button="false" />
       <window_info anchor="bottom" id="Event Log" order="9" sideWeight="0.50061053" side_tool="true" weight="0.39693877" />
       <window_info anchor="bottom" id="Messages" order="10" weight="0.32834226" />
@@ -1137,17 +1136,17 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="165">
-          <caret line="11" column="25" selection-start-line="11" selection-start-column="16" selection-end-line="11" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Procfile">
+    <entry file="file://$PROJECT_DIR$/Procfile">
       <provider selected="true" editor-type-id="text-editor">
         <state>
           <caret column="55" selection-start-column="55" selection-end-column="55" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="4" column="12" lean-forward="true" selection-start-line="4" selection-start-column="12" selection-end-line="4" selection-end-column="12" />
         </state>
       </provider>
     </entry>
