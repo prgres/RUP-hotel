@@ -11,9 +11,4 @@ import org.springframework.web.bind.annotation.CrossOrigin;
 @Controller
 public class DefaultController {
 
-//    @RequestMapping(value = "/")
-//    public String index() {
-//        return "redirect:/index.html";
-//    }
-
 }

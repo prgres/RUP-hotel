@@ -6,10 +6,10 @@
 /Users/prgres/Desktop/RUP-hotel/src/main/java/dino/one/ruphotel/model/persistance/Room.java
 /Users/prgres/Desktop/RUP-hotel/src/main/java/dino/one/ruphotel/model/dto/DataForPaymentService.java
 /Users/prgres/Desktop/RUP-hotel/src/main/java/dino/one/ruphotel/controllers/PaymentsController.java
+/Users/prgres/Desktop/RUP-hotel/src/main/java/dino/one/ruphotel/model/DataValidator.java
 /Users/prgres/Desktop/RUP-hotel/src/main/java/dino/one/ruphotel/service/ClientServiceImpl.java
 /Users/prgres/Desktop/RUP-hotel/src/main/java/dino/one/ruphotel/controllers/UnknownController.java
 /Users/prgres/Desktop/RUP-hotel/src/main/java/dino/one/ruphotel/repository/ReservationRepository.java
-/Users/prgres/Desktop/RUP-hotel/src/main/java/dino/one/ruphotel/model/DeserializedToken.java
 /Users/prgres/Desktop/RUP-hotel/src/main/java/dino/one/ruphotel/service/TokenService.java
 /Users/prgres/Desktop/RUP-hotel/src/main/java/dino/one/ruphotel/model/dto/NewClientDto.java
 /Users/prgres/Desktop/RUP-hotel/src/main/java/dino/one/ruphotel/model/persistance/Client.java

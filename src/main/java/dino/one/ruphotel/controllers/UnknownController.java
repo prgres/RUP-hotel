@@ -14,11 +14,11 @@ public class UnknownController implements ErrorController {
 
     @RequestMapping("/error")
     public String error() {
-        return "redirect:/index.html";
+        return null;
     }
 
     @Override
     public String getErrorPath() {
-        return "redirect:/index.html";
+        return null;
     }
 }
