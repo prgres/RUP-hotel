@@ -96,8 +96,8 @@
           <file pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/src/main/java/dino/one/ruphotel/service/RoomServiceImpl.java">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="1155">
-                  <caret line="81" column="5" selection-start-line="81" selection-start-column="5" selection-end-line="81" selection-end-column="5" />
+                <state relative-caret-position="1125">
+                  <caret line="79" column="5" selection-start-line="79" selection-start-column="5" selection-end-line="79" selection-end-column="5" />
                   <folding>
                     <element signature="imports" expanded="true" />
                   </folding>
@@ -500,7 +500,7 @@
       <option name="presentableId" value="Default" />
       <updated>1544481099394</updated>
       <workItem from="1544481100985" duration="103442000" />
-      <workItem from="1545172524510" duration="9643000" />
+      <workItem from="1545172524510" duration="9908000" />
     </task>
     <task id="LOCAL-00001" summary="add models and basic mapping">
       <created>1544483226943</created>
@@ -649,15 +649,21 @@
       <option name="project" value="LOCAL" />
       <updated>1545173855114</updated>
     </task>
-    <option name="localTasksCounter" value="22" />
+    <task id="LOCAL-00022" summary="added test class">
+      <created>1545190623094</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1545190623094</updated>
+    </task>
+    <option name="localTasksCounter" value="23" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="113085000" />
+    <option name="totallyTimeSpent" value="113350000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1680" height="1027" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49489796" weight="0.23748474" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -673,7 +679,7 @@
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="bottom" id="Terminal" order="7" weight="0.48770052" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="7" visible="true" weight="0.48770052" />
       <window_info anchor="bottom" id="Docker" order="8" show_stripe_button="false" />
       <window_info anchor="bottom" id="Event Log" order="9" sideWeight="0.50061053" side_tool="true" weight="0.39693877" />
       <window_info anchor="bottom" id="Messages" order="10" weight="0.32834226" />
@@ -783,7 +789,8 @@
     <MESSAGE value="gitignore lib" />
     <MESSAGE value="added Post method with send token" />
     <MESSAGE value="working" />
-    <option name="LAST_COMMIT_MESSAGE" value="working" />
+    <MESSAGE value="added test class" />
+    <option name="LAST_COMMIT_MESSAGE" value="added test class" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REARRANGE_BEFORE_PROJECT_COMMIT" value="true" />
@@ -1174,8 +1181,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/dino/one/ruphotel/service/RoomServiceImpl.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1155">
-          <caret line="81" column="5" selection-start-line="81" selection-start-column="5" selection-end-line="81" selection-end-column="5" />
+        <state relative-caret-position="1125">
+          <caret line="79" column="5" selection-start-line="79" selection-start-column="5" selection-end-line="79" selection-end-column="5" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
