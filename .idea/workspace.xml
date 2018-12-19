@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="085b2c22-020e-4393-8df7-367eed034f67" name="Default Changelist" comment="">
+    <list default="true" id="085b2c22-020e-4393-8df7-367eed034f67" name="Default Changelist" comment="fix price">
+      <change afterPath="$PROJECT_DIR$/src/main/java/dino/one/ruphotel/model/DataValidator.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/dino/one/ruphotel/controllers/PaymentsController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dino/one/ruphotel/controllers/PaymentsController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/dino/one/ruphotel/controllers/RoomsController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dino/one/ruphotel/controllers/RoomsController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/dino/one/ruphotel/model/persistance/Client.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dino/one/ruphotel/model/persistance/Client.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/dino/one/ruphotel/controllers/DefaultController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dino/one/ruphotel/controllers/DefaultController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/dino/one/ruphotel/model/DeserializedToken.java" beforeDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -61,11 +61,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/dino/one/ruphotel/controllers/PaymentsController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="678">
-              <caret line="80" lean-forward="true" selection-start-line="80" selection-end-line="80" />
+            <state relative-caret-position="587">
+              <caret line="80" selection-start-line="80" selection-end-line="80" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="method#PaymentsController#0;class#PaymentsController#0" />
@@ -79,7 +79,7 @@
         <entry file="file://$PROJECT_DIR$/src/main/java/dino/one/ruphotel/model/dto/NewClientDto.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="210">
-              <caret line="14" column="2" lean-forward="true" selection-start-line="14" selection-start-column="2" selection-end-line="21" selection-end-column="37" />
+              <caret line="14" column="2" selection-start-line="14" selection-start-column="2" selection-end-line="21" selection-end-column="37" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -90,8 +90,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/dino/one/ruphotel/service/ClientServiceImpl.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-170">
-              <caret line="19" column="25" lean-forward="true" selection-start-line="19" selection-start-column="25" selection-end-line="19" selection-end-column="25" />
+            <state relative-caret-position="-5">
+              <caret line="32" column="29" lean-forward="true" selection-start-line="32" selection-start-column="29" selection-end-line="32" selection-end-column="29" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -104,6 +104,54 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="540">
               <caret line="36" column="18" selection-start-line="36" selection-start-column="18" selection-end-line="36" selection-end-column="18" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/dino/one/ruphotel/service/ReservationServiceImpl.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="258">
+              <caret line="39" column="54" lean-forward="true" selection-start-line="39" selection-start-column="54" selection-end-line="39" selection-end-column="54" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/dino/one/ruphotel/model/persistance/Reservation.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="270">
+              <caret line="26" lean-forward="true" selection-start-line="26" selection-end-line="26" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/dino/one/ruphotel/model/DataValidator.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="527">
+              <caret line="39" column="1" lean-forward="true" selection-start-line="39" selection-start-column="1" selection-end-line="39" selection-end-column="1" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/dino/one/ruphotel/controllers/DefaultController.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="195">
+              <caret line="13" lean-forward="true" selection-start-line="13" selection-end-line="13" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -153,8 +201,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/main/java/dino/one/ruphotel/model/AvailableRoomsRequest.java" />
-        <option value="$PROJECT_DIR$/src/main/java/dino/one/ruphotel/model/AvailableRoomsDto.java" />
         <option value="$PROJECT_DIR$/src/main/java/dino/one/ruphotel/service/UserServiceImpl.java" />
         <option value="$PROJECT_DIR$/src/main/java/dino/one/ruphotel/model/RoomType.java" />
         <option value="$PROJECT_DIR$/src/main/java/dino/one/ruphotel/model/Reservation.java" />
@@ -178,14 +224,12 @@
         <option value="$PROJECT_DIR$/src/main/java/dino/one/ruphotel/model/persistance/RoomType.java" />
         <option value="$PROJECT_DIR$/src/main/java/dino/one/ruphotel/model/dto/NewClientDto.java" />
         <option value="$PROJECT_DIR$/src/main/java/dino/one/ruphotel/service/ReservationService.java" />
-        <option value="$PROJECT_DIR$/src/main/java/dino/one/ruphotel/service/ReservationServiceImpl.java" />
         <option value="$PROJECT_DIR$/target/classes/application.properties" />
         <option value="$PROJECT_DIR$/src/main/java/dino/one/ruphotel/model/SSHConnection.java" />
         <option value="$PROJECT_DIR$/src/main/java/dino/one/ruphotel/controllers/ssh/LocalUserInfo.java" />
         <option value="$PROJECT_DIR$/src/main/java/dino/one/ruphotel/controllers/ssh/SSHConnection.java" />
         <option value="$PROJECT_DIR$/src/main/java/dino/one/ruphotel/RupHotelApplication.java" />
         <option value="$PROJECT_DIR$/src/main/java/dino/one/ruphotel/service/TokenService.java" />
-        <option value="$PROJECT_DIR$/src/main/java/dino/one/ruphotel/controllers/DefaultController.java" />
         <option value="$PROJECT_DIR$/src/main/java/dino/one/ruphotel/model/persistance/Room.java" />
         <option value="$PROJECT_DIR$/src/main/resources/application.properties" />
         <option value="$PROJECT_DIR$/src/main/java/dino/one/ruphotel/controllers/UnknownController.java" />
@@ -204,6 +248,10 @@
         <option value="$PROJECT_DIR$/src/main/java/dino/one/ruphotel/model/persistance/Client.java" />
         <option value="$PROJECT_DIR$/src/main/java/dino/one/ruphotel/controllers/RoomsController.java" />
         <option value="$PROJECT_DIR$/src/main/java/dino/one/ruphotel/controllers/PaymentsController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/dino/one/ruphotel/service/ReservationServiceImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/java/dino/one/ruphotel/model/IdNumberValidator.java" />
+        <option value="$PROJECT_DIR$/src/main/java/dino/one/ruphotel/controllers/DefaultController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/dino/one/ruphotel/model/DataValidator.java" />
       </list>
     </option>
   </component>
@@ -296,6 +344,16 @@
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="ruphotel" type="462c0819:PsiDirectoryNode" />
               <item name="model" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="rup-hotel" type="b2602c69:ProjectViewProjectNode" />
+              <item name="RUP-hotel" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="ruphotel" type="462c0819:PsiDirectoryNode" />
+              <item name="model" type="462c0819:PsiDirectoryNode" />
+              <item name="dto" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="rup-hotel" type="b2602c69:ProjectViewProjectNode" />
@@ -433,7 +491,7 @@
       <option name="presentableId" value="Default" />
       <updated>1544481099394</updated>
       <workItem from="1544481100985" duration="103442000" />
-      <workItem from="1545172524510" duration="13355000" />
+      <workItem from="1545172524510" duration="16505000" />
     </task>
     <task id="LOCAL-00001" summary="add models and basic mapping">
       <created>1544483226943</created>
@@ -631,11 +689,25 @@
       <option name="project" value="LOCAL" />
       <updated>1545192136743</updated>
     </task>
-    <option name="localTasksCounter" value="29" />
+    <task id="LOCAL-00029" summary="return json in /generete-token">
+      <created>1545194620736</created>
+      <option name="number" value="00029" />
+      <option name="presentableId" value="LOCAL-00029" />
+      <option name="project" value="LOCAL" />
+      <updated>1545194620736</updated>
+    </task>
+    <task id="LOCAL-00030" summary="fix price">
+      <created>1545195149513</created>
+      <option name="number" value="00030" />
+      <option name="presentableId" value="LOCAL-00030" />
+      <option name="project" value="LOCAL" />
+      <updated>1545195149513</updated>
+    </task>
+    <option name="localTasksCounter" value="31" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="116797000" />
+    <option name="totallyTimeSpent" value="119947000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1680" height="1027" extended-state="6" />
@@ -655,14 +727,14 @@
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="bottom" id="Terminal" order="7" weight="0.46203208" />
+      <window_info anchor="bottom" id="Terminal" order="7" weight="0.21283422" />
       <window_info anchor="bottom" id="Docker" order="8" show_stripe_button="false" />
       <window_info anchor="bottom" id="Event Log" order="9" sideWeight="0.50061053" side_tool="true" weight="0.39693877" />
       <window_info anchor="bottom" id="Messages" order="10" weight="0.32834226" />
       <window_info anchor="bottom" id="Java Enterprise" order="11" weight="0.32941177" />
       <window_info anchor="bottom" id="Spring" order="12" weight="0.32959184" />
       <window_info anchor="bottom" id="Database Changes" order="13" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Version Control" order="14" weight="0.32959184" />
+      <window_info anchor="bottom" id="Version Control" order="14" visible="true" weight="0.2748663" />
       <window_info anchor="right" id="Commander" order="0" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.24969475" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -766,7 +838,9 @@
     <MESSAGE value="added Post method with send token" />
     <MESSAGE value="working" />
     <MESSAGE value="added test class" />
-    <option name="LAST_COMMIT_MESSAGE" value="added test class" />
+    <MESSAGE value="return json in /generete-token" />
+    <MESSAGE value="fix price" />
+    <option name="LAST_COMMIT_MESSAGE" value="fix price" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REARRANGE_BEFORE_PROJECT_COMMIT" value="true" />
@@ -788,13 +862,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_131.jdk/Contents/Home/src.zip!/java/net/PlainSocketImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="588">
-          <caret line="104" column="16" selection-start-line="104" selection-start-column="16" selection-end-line="104" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_131.jdk/Contents/Home/src.zip!/java/util/function/Consumer.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="117">
@@ -885,16 +952,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/dino/one/ruphotel/model/persistance/Reservation.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="390">
-          <caret line="26" lean-forward="true" selection-start-line="26" selection-end-line="26" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/mvnw">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-134" />
@@ -905,16 +962,6 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/rup-hotel.iml">
       <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/dino/one/ruphotel/model/DeserializedToken.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="225">
-          <caret line="15" column="23" lean-forward="true" selection-start-line="15" selection-start-column="23" selection-end-line="15" selection-end-column="23" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/dino/one/ruphotel/service/ReservationService.java">
       <provider selected="true" editor-type-id="text-editor">
@@ -970,16 +1017,6 @@
             <element signature="imports" expanded="true" />
             <element signature="e#581#582#0" expanded="true" />
             <element signature="e#613#614#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/dino/one/ruphotel/controllers/DefaultController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="20" selection-start-line="20" selection-end-line="20" />
-          <folding>
-            <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1067,26 +1104,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/dino/one/ruphotel/model/dto/NewClientDto.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="14" column="2" lean-forward="true" selection-start-line="14" selection-start-column="2" selection-end-line="21" selection-end-column="37" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/dino/one/ruphotel/service/ClientServiceImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-170">
-          <caret line="19" column="25" lean-forward="true" selection-start-line="19" selection-start-column="25" selection-end-line="19" selection-end-column="25" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/dino/one/ruphotel/service/ReservationServiceImplTest.groovy">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="150">
@@ -1098,16 +1115,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="60">
           <caret line="4" column="3" lean-forward="true" selection-start-line="4" selection-start-column="3" selection-end-line="4" selection-end-column="3" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/dino/one/ruphotel/model/persistance/Client.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="540">
-          <caret line="36" column="18" selection-start-line="36" selection-start-column="18" selection-end-line="36" selection-end-column="18" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1151,16 +1158,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/dino/one/ruphotel/service/ReservationServiceImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="183">
-          <caret line="25" column="17" lean-forward="true" selection-start-line="25" selection-start-column="17" selection-end-line="25" selection-end-column="17" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/dino/one/ruphotel/service/RoomServiceImpl.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="105">
@@ -1171,14 +1168,94 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/dino/one/ruphotel/service/ReservationServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="258">
+          <caret line="39" column="54" lean-forward="true" selection-start-line="39" selection-start-column="54" selection-end-line="39" selection-end-column="54" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/dino/one/ruphotel/model/persistance/Client.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="540">
+          <caret line="36" column="18" selection-start-line="36" selection-start-column="18" selection-end-line="36" selection-end-column="18" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/dino/one/ruphotel/model/DeserializedToken.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="225">
+          <caret line="15" column="18" selection-start-line="15" selection-start-column="18" selection-end-line="15" selection-end-column="18" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/dino/one/ruphotel/model/persistance/Reservation.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="270">
+          <caret line="26" lean-forward="true" selection-start-line="26" selection-end-line="26" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/dino/one/ruphotel/controllers/PaymentsController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="678">
-          <caret line="80" lean-forward="true" selection-start-line="80" selection-end-line="80" />
+        <state relative-caret-position="587">
+          <caret line="80" selection-start-line="80" selection-end-line="80" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="method#PaymentsController#0;class#PaymentsController#0" />
             <element signature="e#2627#2643#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/dino/one/ruphotel/model/dto/NewClientDto.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="210">
+          <caret line="14" column="2" selection-start-line="14" selection-start-column="2" selection-end-line="21" selection-end-column="37" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/dino/one/ruphotel/service/ClientServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-5">
+          <caret line="32" column="29" lean-forward="true" selection-start-line="32" selection-start-column="29" selection-end-line="32" selection-end-column="29" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/dino/one/ruphotel/model/DataValidator.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="527">
+          <caret line="39" column="1" lean-forward="true" selection-start-line="39" selection-start-column="1" selection-end-line="39" selection-end-column="1" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/dino/one/ruphotel/controllers/DefaultController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="195">
+          <caret line="13" lean-forward="true" selection-start-line="13" selection-end-line="13" />
+          <folding>
+            <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
