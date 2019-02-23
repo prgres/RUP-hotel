@@ -1,5 +1,6 @@
 package dino.one.ruphotel.model;
 
+import dino.one.ruphotel.model.dto.NewClientDto;
 import lombok.Getter;
 import lombok.Setter;
 import lombok.ToString;
@@ -37,4 +38,21 @@ public class DataValidator {
         return ((sum % 10) + '0') == idNumber.charAt(3);
     }
 
+    public boolean newClientDtoValidate(NewClientDto newClientDto) {
+        boolean status = true;
+
+        if (newClientDto.getName().length() < 2)
+            status = false;
+
+        if (newClientDto.getSurname().length() < 2)
+            status = false;
+
+        if (!newClientDto.getSurname().matches("^[a-zA-Z0-9]+$"))
+            status = false;
+
+        if (!newClientDto.getName().matches("^[a-zA-Z0-9]+$"))
+            status = false;
+
+        return status;
+    }
 }

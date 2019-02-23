@@ -22,7 +22,6 @@ public class RoomsController {
     @PostMapping(value = "/rooms")
     public @ResponseBody
     Iterable<Room> rooms(@RequestBody AvailableRoomsDto availableRoomsDto) {
-        return roomService.findAvailableRoomsAlternative(availableRoomsDto);
-//        return roomService.findAvailableRooms(availableRoomsDto);
+        return roomService.find(availableRoomsDto);
     }
 }

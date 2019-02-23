@@ -23,7 +23,7 @@ public class Client {
 
     @Column(name = "name",
             nullable = false)
-    @Size(max = 30)
+    @Size(min = 2, max = 30)
     private String name;
 
     @Column(name = "surname",

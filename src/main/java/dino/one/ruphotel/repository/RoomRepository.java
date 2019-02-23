@@ -17,6 +17,8 @@ public interface RoomRepository
 
     List<Room> findAll();
 
+    List<Room> findByRoomTypeEquals(Long roomType);
+
 //    List<Room> findAllByRoom(Date endDate, Date startDate, long personCount);
 
 //    List<Room> findAllByRoomType_IdGreaterThanEqualAndReservation_ArrivalLessThanEqualOrReservation_DepartureGreaterThanEqualOrReservation_ArrivalIsNull

@@ -1,8 +1,8 @@
 package dino.one.ruphotel.controllers;
 
+import dino.one.ruphotel.model.DataValidator;
 import dino.one.ruphotel.model.dto.DataForPaymentService;
 import dino.one.ruphotel.model.dto.NewClientDto;
-import dino.one.ruphotel.model.dto.ReservationToRemove;
 import dino.one.ruphotel.model.persistance.Client;
 import dino.one.ruphotel.model.persistance.Reservation;
 import dino.one.ruphotel.service.ClientServiceImpl;
@@ -42,6 +42,14 @@ public class PaymentsController {
     public @ResponseBody
     HashMap<String, Object> generateToken(
             @RequestBody NewClientDto newClientDto) {
+
+        DataValidator dataValidator = new DataValidator();
+
+        if (!dataValidator.idNumberValidate(newClientDto.getIdentity()))
+            return null;
+
+        if (!dataValidator.newClientDtoValidate(newClientDto))
+            return null;
 
         Client client = clientService.checkIfUserExist(newClientDto.getName(),
                 newClientDto.getSurname(),
@@ -83,7 +91,7 @@ public class PaymentsController {
 
 
     @PostMapping(value = "/toBeOrNotToBe")
-    public void toBeOrNotToBe(@RequestBody ReservationToRemove reservationToRemove) {
-        reservationService.deleteById(reservationToRemove.getId());
+    public void toBeOrNotToBe(@RequestBody String reservationToRemove) {
+        reservationService.deleteById(Long.valueOf(reservationToRemove));
     }
 }

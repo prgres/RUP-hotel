@@ -30,7 +30,12 @@ public class RoomServiceImpl implements RoomService {
     }
 
     @Override
-    public List<Room> findAvailableRoomsAlternative(AvailableRoomsDto availableRoomsDto) {
+    public List<Room> find(AvailableRoomsDto availableRoomsDto) {
+        return roomRepository.findByRoomTypeEquals(availableRoomsDto.getPersonCount());
+    }
+
+    @Override
+    public List<Room> findAvailableRoomsEqualsToPersonNumber(AvailableRoomsDto availableRoomsDto) {
         List<Room> allRooms = roomRepository.findAll();
         System.out.println(allRooms);
 
@@ -57,9 +62,9 @@ public class RoomServiceImpl implements RoomService {
         return avaible;
     }
 
-
+/*
     @Override
-    public List<Room> findAvailableRooms(AvailableRoomsDto availableRoomsDto) {
+    public List<Room> findAvailableRoomsQuery (AvailableRoomsDto availableRoomsDto) {
         List<Room> fromRepo = roomRepository.
                 findAllByReservation_ArrivalLessThanEqualOrReservation_DepartureGreaterThanEqualOrReservation_ArrivalIsNullOrReservation_DepartureIsNull(
                         availableRoomsDto.getTo(),
@@ -77,4 +82,5 @@ public class RoomServiceImpl implements RoomService {
         return listToReturn;
 
     }
+*/
 }

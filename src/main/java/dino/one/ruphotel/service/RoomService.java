@@ -10,9 +10,11 @@ import java.util.List;
  */
 
 public interface RoomService {
-    List<Room> findAvailableRooms(AvailableRoomsDto availableRoomsDto);
+    List<Room> findAvailableRoomsQuery(AvailableRoomsDto availableRoomsDto);
 
-    List<Room> findAvailableRoomsAlternative(AvailableRoomsDto availableRoomsDto);
+    List<Room> findAvailableRoomsEqualsToPersonNumber(AvailableRoomsDto availableRoomsDto);
 
     List<Room> findAll();
+
+    List<Room> find(AvailableRoomsDto availableRoomsDto);
 }
